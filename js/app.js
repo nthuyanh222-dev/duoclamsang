@@ -219,11 +219,10 @@
   function route(){
     if(!state.data)return;
     var m=/^#\/p\/(.+)$/.exec(location.hash),id=m?decodeURIComponent(m[1]):null;
+    // id chưa có trong danh mục (có thể danh mục đang là bản cũ): hiện trang chủ nhưng giữ link
+    // để lần tải lại sau khi service worker cập nhật vẫn mở đúng tài liệu
     if(id&&state.byId[id])openDoc(state.byId[id]);
-    else{
-      if(id)history.replaceState(null,'','#/');
-      showHome();
-    }
+    else showHome();
   }
   function go(r){if(r)location.hash='#/p/'+encodeURIComponent(r.id);}
   function step(d){
@@ -302,6 +301,14 @@
   function registerSW(){
     if(!('serviceWorker' in navigator)||!/^https?:$/.test(location.protocol))return;
     window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});
+    // có bản service worker mới (đã có bản cũ điều khiển trang): tải lại một lần để dùng danh mục mới
+    if(navigator.serviceWorker.controller){
+      var reloaded=false;
+      navigator.serviceWorker.addEventListener('controllerchange',function(){
+        if(reloaded)return;
+        reloaded=true;location.reload();
+      });
+    }
   }
 
   // ---------- khởi động ----------
