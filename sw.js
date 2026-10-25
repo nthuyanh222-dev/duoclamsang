@@ -1,6 +1,6 @@
 /* Service worker ClinPharmAI Hub.
    Tăng CACHE_VERSION mỗi khi đổi app shell hoặc tài liệu. */
-var CACHE_VERSION='cpa-hub-v1.1.5';
+var CACHE_VERSION='cpa-hub-v1.1.6';
 var CDN_CACHE='cpa-cdn-v1';
 var SHELL=['./','index.html','css/app.css','js/app.js','data/pages.json','manifest.webmanifest','icons/icon.svg','icons/icon-192.png','icons/icon-512.png'];
 var CDN_HOSTS=['cdn.tailwindcss.com','cdn.jsdelivr.net','cdnjs.cloudflare.com','fonts.googleapis.com','fonts.gstatic.com'];
