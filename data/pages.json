@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-10-25",
+  "source": "1. Khoa Dược – Bệnh viện Đa khoa Phương Nam. Danh mục tài liệu chuyên môn ClinPharmAI (lưu hành nội bộ). 2026.",
+  "status": "unverified",
+  "note": "Danh mục chỉ liệt kê tệp gốc; nội dung chuyên môn nằm trong từng tệp và chưa được kiểm chứng lại trong hub.",
+  "groups": [
+    { "id": "guideline", "label": "Tóm tắt guideline", "icon": "book" },
+    { "id": "drug-info", "label": "Thông tin thuốc", "icon": "pill" },
+    { "id": "compare", "label": "So sánh dược lý", "icon": "scale" },
+    { "id": "ebm", "label": "Thẩm định EBM", "icon": "search" }
+  ],
+  "records": [
+    { "id": "acg-2026-xo-gan", "group": "guideline", "file": "ACG-2026-xo-gan-du-phong-tom-tat.html", "title": "ACG 2026 – Chăm sóc dự phòng cho người bệnh xơ gan", "short": "ACG 2026 – Xơ gan dự phòng", "org": "ACG", "year": 2026, "tags": ["gan", "xơ gan", "tiêu hóa"] },
+    { "id": "acr-2026-oa", "group": "guideline", "file": "acr-2026-osteoarthritis.html", "title": "ACR 2026 – Hướng dẫn điều trị thoái hóa khớp", "short": "ACR 2026 – Thoái hóa khớp", "org": "ACR", "year": 2026, "tags": ["cơ xương khớp", "osteoarthritis"] },
+    { "id": "ada-easd-2026-dtd2", "group": "guideline", "file": "ada-easd-2026-dai-thao-duong-tip-2.html", "title": "Đồng thuận ADA/EASD 2026 – Quản lý đái tháo đường típ 2", "short": "ADA/EASD 2026 – ĐTĐ típ 2", "org": "ADA/EASD", "year": 2026, "tags": ["nội tiết", "đái tháo đường"] },
+    { "id": "aha-ckm-2026", "group": "guideline", "file": "aha-acc-ada-ckm-syndrome-2026.html", "title": "AHA/ACC/ADA/ASN 2026 – Hội chứng tim mạch – thận – chuyển hóa (CKM)", "short": "AHA/ACC 2026 – Hội chứng CKM", "org": "AHA/ACC/ADA/ASN", "year": 2026, "tags": ["tim mạch", "thận", "chuyển hóa"] },
+    { "id": "ash-2026-thieu-sat", "group": "guideline", "file": "ash-2026-iron-deficiency.html", "title": "ASH 2026 – Thiếu sắt", "short": "ASH 2026 – Thiếu sắt", "org": "ASH", "year": 2026, "tags": ["huyết học", "thiếu máu", "sắt"] },
+    { "id": "esc-2026-suy-tim", "group": "guideline", "file": "cap-nhat-esc-2026-suy-tim.html", "title": "Cập nhật ESC 2026 – Suy tim", "short": "ESC 2026 – Suy tim", "org": "ESC", "year": 2026, "tags": ["tim mạch", "suy tim"] },
+    { "id": "gina-2026-hen", "group": "guideline", "file": "GINA-2026-Ch3-4-tom-tat.html", "title": "GINA 2026 – Điều trị hen người lớn, thanh thiếu niên và trẻ 6–11 tuổi", "short": "GINA 2026 – Hen", "org": "GINA", "year": 2026, "tags": ["hô hấp", "hen"] },
+    { "id": "dtd-2023-2026", "group": "guideline", "file": "Guideline đái tháo đường 2023 2026.html", "title": "Bảo vệ cơ quan thay dần HbA1c trong guideline đái tháo đường 2023–2026", "short": "ĐTĐ 2023–2026 – Bảo vệ cơ quan", "org": "Tổng hợp", "year": 2026, "tags": ["nội tiết", "đái tháo đường", "HbA1c"] },
+    { "id": "idsa-2026-gram-am", "group": "guideline", "file": "idsa-2026-gram-am-khang-thuoc.html", "title": "IDSA 2026 – Phác đồ kháng sinh cho vi khuẩn Gram âm kháng thuốc", "short": "IDSA 2026 – Gram âm kháng thuốc", "org": "IDSA", "year": 2026, "tags": ["kháng sinh", "nhiễm khuẩn", "Gram âm"] },
+    { "id": "sstis-s-aureus", "group": "guideline", "file": "nhiem-trung-da-mo-mem-staphylococcus-aureus.html", "title": "Chẩn đoán và điều trị nhiễm trùng da – mô mềm do Staphylococcus aureus", "short": "Nhiễm trùng da – mô mềm do S. aureus", "org": "Tổng hợp", "year": null, "tags": ["kháng sinh", "nhiễm khuẩn", "MRSA", "da"] },
+    { "id": "bexsero", "group": "drug-info", "file": "Bexsero_Tai_lieu_thong_tin_thuoc.html", "title": "Bexsero – Tài liệu thông tin thuốc", "short": "Bexsero (vắc xin não mô cầu B)", "org": "HDSD", "year": null, "tags": ["vắc xin", "não mô cầu"] },
+    { "id": "lipitor", "group": "drug-info", "file": "Lipitor_Tai_lieu_thong_tin_thuoc.html", "title": "Lipitor – Tài liệu thông tin thuốc", "short": "Lipitor (atorvastatin)", "org": "HDSD", "year": null, "tags": ["statin", "atorvastatin", "tim mạch"] },
+    { "id": "meronem", "group": "drug-info", "file": "Meronem_IV_Tai_lieu_thong_tin_thuoc.html", "title": "Meronem IV – Tài liệu thông tin thuốc", "short": "Meronem IV (meropenem)", "org": "HDSD", "year": null, "tags": ["kháng sinh", "carbapenem", "meropenem"] },
+    { "id": "ss-carbapenem", "group": "compare", "file": "so-sanh-carbapenem-duoc-ly-lam-sang.html", "title": "So sánh carbapenem – Dược lý lâm sàng", "short": "Carbapenem", "org": "ClinPharmAI", "year": null, "tags": ["kháng sinh", "meropenem", "imipenem", "ertapenem"] },
+    { "id": "ss-fluoroquinolon", "group": "compare", "file": "so-sanh-fluoroquinolon-duoc-ly-lam-sang.html", "title": "So sánh ciprofloxacin – levofloxacin – moxifloxacin", "short": "Fluoroquinolon", "org": "ClinPharmAI", "year": null, "tags": ["kháng sinh", "quinolon"] },
+    { "id": "ss-macrolid", "group": "compare", "file": "so-sanh-macrolid-duoc-ly-lam-sang.html", "title": "So sánh macrolid – Dược lý lâm sàng", "short": "Macrolid", "org": "ClinPharmAI", "year": null, "tags": ["kháng sinh", "azithromycin", "clarithromycin"] },
+    { "id": "ss-ppi", "group": "compare", "file": "so-sanh-ppi-duoc-ly-lam-sang.html", "title": "So sánh 5 thuốc ức chế bơm proton (PPI)", "short": "Ức chế bơm proton (PPI)", "org": "ClinPharmAI", "year": null, "tags": ["tiêu hóa", "omeprazol", "esomeprazol"] },
+    { "id": "ss-statin", "group": "compare", "file": "statin-7-so-sanh-duoc-ly-lam-sang.html", "title": "Dược lý lâm sàng so sánh 7 statin: tra cứu, quy đổi liều và lựa chọn theo tình huống", "short": "Statin (7 thuốc)", "org": "ClinPharmAI", "year": null, "tags": ["tim mạch", "lipid", "atorvastatin", "rosuvastatin"] },
+    { "id": "ebm-azithro-jama-2026", "group": "ebm", "file": "azithromycin-du-phong-mo-lay-thai.html", "title": "Thẩm định: azithromycin trong mổ lấy thai ngoài kế hoạch (JAMA 2026)", "short": "Azithromycin mổ lấy thai – JAMA 2026", "org": "JAMA", "year": 2026, "tags": ["sản khoa", "kháng sinh dự phòng", "RCT"] },
+    { "id": "ebm-bjog-azithro-sr", "group": "ebm", "file": "bjog-azithromycin-sr-journal.html", "title": "Thẩm định EBM: Kuitunen, BJOG 2024 – tổng quan hệ thống azithromycin", "short": "Kuitunen BJOG 2024 – SR azithromycin", "org": "BJOG", "year": 2024, "tags": ["sản khoa", "kháng sinh dự phòng", "SR/MA"] }
+  ]
+}
