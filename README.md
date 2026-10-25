@@ -6,7 +6,7 @@ Thư viện tài liệu dược lâm sàng dạng PWA, có thanh điều hướn
 
 ```
 index.html              khung app: sidebar + vùng xem tài liệu
-css/app.css             design system ClinPharmAI + theme đơn vị (Phương Nam / Phương Châu)
+css/app.css             design system ClinPharmAI + theme đơn vị (BVPS MêKông / Phương Châu)
 js/app.js               điều hướng, tìm kiếm không dấu, định tuyến #/p/<id>
 data/pages.json         danh mục tài liệu (version, updated, source, status, records)
 sw.js                   service worker: cache app + 20 tài liệu + thư viện CDN
@@ -50,3 +50,4 @@ Mở http://localhost:8080. Mở thẳng `index.html` bằng cách nhấp đúp 
 | 2026-10-25 | 1.1.0 | Thêm 2 tóm tắt guideline: EAU 2026 nhiễm khuẩn niệu khoa (mục 3.3–3.9); KDIGO AKI/AKD dự thảo 03/2026 (chương 3–4). Tổng 22 tài liệu | Tệp chép giữ nguyên (so khớp hash); 22/22 tài liệu HTTP 200; tìm kiếm; service worker cài lại với cache mới |
 | 2026-10-25 | sw 1.1.1 | Service worker: `data/` lấy mạng trước, mất mạng mới dùng cache, để tài liệu mới hiện ngay ở lần mở đầu tiên sau cập nhật | Gài danh mục cũ vào cache, tải lại vẫn hiện v1.1.0; tắt máy chủ, tải lại vẫn mở được danh mục và EAU |
 | 2026-10-25 | sw 1.1.3 | Có service worker mới thì trang tự tải lại một lần; link tới id chưa có trong danh mục được giữ nguyên thay vì đổi về trang chủ | Tăng CACHE_VERSION, trang tự tải lại đúng một lần, giữ hash, xóa cache cũ, không lặp tải lại, không lỗi console |
+| 2026-10-25 | 1.1.1 | Đổi tên đơn vị BVĐK Phương Nam thành BVPS MêKông (thanh bên, ô chọn đơn vị, nguồn danh mục); mã nội bộ `phuong-nam` đổi thành `mekong`, lựa chọn cũ đã lưu tự chuyển sang | Hiển thị tên mới; lựa chọn cũ `phuong-nam` vẫn ra MêKông; đổi qua lại Phương Châu; không lỗi console |

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="vi" data-unit="phuong-nam">
+<html lang="vi" data-unit="mekong">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -18,7 +18,8 @@
   try{
     var t=localStorage.getItem('cpa-theme'),u=localStorage.getItem('cpa-unit');
     if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);
-    if(u==='phuong-nam'||u==='phuong-chau')document.documentElement.setAttribute('data-unit',u);
+    if(u==='phuong-nam')u='mekong'; // mã cũ trước khi đổi tên đơn vị
+    if(u==='mekong'||u==='phuong-chau')document.documentElement.setAttribute('data-unit',u);
   }catch(e){}
 </script>
 </head>
@@ -48,7 +49,7 @@
       <span class="brand-mark"><svg class="ico"><use href="#i-logo"/></svg></span>
       <span class="brand-text">
         <span class="brand-name">ClinPharmAI</span><br>
-        <span class="brand-unit" id="brandUnit">Khoa Dược – BVĐK Phương Nam</span>
+        <span class="brand-unit" id="brandUnit">Khoa Dược – BVPS MêKông</span>
       </span>
     </a>
 
@@ -69,7 +70,7 @@
       <div class="side-row">
         <label for="unitSel" class="sr-only">Đơn vị</label>
         <select id="unitSel">
-          <option value="phuong-nam">BVĐK Phương Nam</option>
+          <option value="mekong">BVPS MêKông</option>
           <option value="phuong-chau">BV Phương Châu</option>
         </select>
         <button class="icon-btn" id="themeBtn" type="button" title="Đổi giao diện sáng/tối" aria-label="Đổi giao diện sáng/tối"><svg class="ico"><use href="#i-moon"/></svg></button>

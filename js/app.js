@@ -5,7 +5,7 @@
 
   var DATA_URL='data/pages.json';
   var UNITS={
-    'phuong-nam':{name:'Khoa Dược – BVĐK Phương Nam',color:'#1f3a6e'},
+    'mekong':{name:'Khoa Dược – BVPS MêKông',color:'#1f3a6e'},
     'phuong-chau':{name:'Khoa Dược – BV Phương Châu',color:'#0f5f63'}
   };
   var GROUP_ICON={book:'i-book',pill:'i-pill',scale:'i-scale',search:'i-search'};
@@ -232,7 +232,7 @@
 
   // ---------- giao diện ----------
   function setUnit(u){
-    if(!UNITS[u])u='phuong-nam';
+    if(!UNITS[u])u='mekong'; // gồm cả mã cũ 'phuong-nam' đã lưu trước khi đổi tên
     root.setAttribute('data-unit',u);
     el.unitSel.value=u;el.brandUnit.textContent=UNITS[u].name;
     var meta=document.querySelector('meta[name="theme-color"]');if(meta)meta.content=UNITS[u].color;
