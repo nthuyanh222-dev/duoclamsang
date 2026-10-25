@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="vi" data-unit="phuong-nam">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ClinPharmAI Hub</title>
+<meta name="description" content="Thư viện tài liệu dược lâm sàng: tóm tắt guideline, thông tin thuốc, so sánh dược lý, thẩm định EBM.">
+<meta name="theme-color" content="#1f3a6e">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/app.css">
+<script>
+  // Áp theme trước khi vẽ để tránh nháy màu
+  try{
+    var t=localStorage.getItem('cpa-theme'),u=localStorage.getItem('cpa-unit');
+    if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);
+    if(u==='phuong-nam'||u==='phuong-chau')document.documentElement.setAttribute('data-unit',u);
+  }catch(e){}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-logo" viewBox="0 0 24 24"><path d="M10.5 20.5 3.5 13.5a4.95 4.95 0 1 1 7-7l7 7a4.95 4.95 0 1 1-7 7Z"/><path d="m8.5 8.5 7 7"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6.5A2.5 2.5 0 0 0 4 21.5v-2Z"/><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/></symbol>
+  <symbol id="i-pill" viewBox="0 0 24 24"><path d="M10.5 20.5 3.5 13.5a4.95 4.95 0 1 1 7-7l7 7a4.95 4.95 0 1 1-7 7Z"/><path d="m8.5 8.5 7 7"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 21h14M7 7h10M7 7l-3 7a3 3 0 0 0 6 0Zm10 0-3 7a3 3 0 0 0 6 0Z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-panel" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-full" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+  <symbol id="i-reload" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+</svg>
+
+<div class="app" id="app">
+  <aside class="sidebar" id="sidebar" aria-label="Điều hướng">
+    <a class="brand" href="#/">
+      <span class="brand-mark"><svg class="ico"><use href="#i-logo"/></svg></span>
+      <span class="brand-text">
+        <span class="brand-name">ClinPharmAI</span><br>
+        <span class="brand-unit" id="brandUnit">Khoa Dược – BVĐK Phương Nam</span>
+      </span>
+    </a>
+
+    <div class="side-search" role="search">
+      <label for="q" class="sr-only">Tìm tài liệu</label>
+      <svg class="ico"><use href="#i-search"/></svg>
+      <input id="q" type="search" placeholder="Tìm tài liệu, thuốc…" autocomplete="off" spellcheck="false">
+      <kbd>/</kbd>
+    </div>
+
+    <nav class="nav" id="nav" aria-label="Danh mục tài liệu">
+      <a class="nav-home" href="#/" id="navHome"><svg class="ico"><use href="#i-home"/></svg>Trang chủ</a>
+      <div id="navGroups"></div>
+      <p class="nav-empty" id="navEmpty" hidden>Không tìm thấy tài liệu phù hợp.</p>
+    </nav>
+
+    <div class="side-foot">
+      <div class="side-row">
+        <label for="unitSel" class="sr-only">Đơn vị</label>
+        <select id="unitSel">
+          <option value="phuong-nam">BVĐK Phương Nam</option>
+          <option value="phuong-chau">BV Phương Châu</option>
+        </select>
+        <button class="icon-btn" id="themeBtn" type="button" title="Đổi giao diện sáng/tối" aria-label="Đổi giao diện sáng/tối"><svg class="ico"><use href="#i-moon"/></svg></button>
+      </div>
+      <div class="data-ver" id="dataVer">Đang tải danh mục…</div>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-controls="sidebar" aria-expanded="true" title="Ẩn/hiện thanh bên (Ctrl+B)" aria-label="Ẩn/hiện thanh bên"><svg class="ico"><use href="#i-panel"/></svg></button>
+      <div class="crumb">
+        <span class="crumb-group" id="crumbGroup">ClinPharmAI Hub</span>
+        <span class="crumb-title" id="crumbTitle">Trang chủ</span>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn hide-sm" id="prevBtn" type="button" title="Tài liệu trước" aria-label="Tài liệu trước" hidden><svg class="ico"><use href="#i-prev"/></svg></button>
+        <button class="icon-btn hide-sm" id="nextBtn" type="button" title="Tài liệu sau" aria-label="Tài liệu sau" hidden><svg class="ico"><use href="#i-next"/></svg></button>
+        <button class="icon-btn" id="reloadBtn" type="button" title="Tải lại tài liệu" aria-label="Tải lại tài liệu" hidden><svg class="ico"><use href="#i-reload"/></svg></button>
+        <button class="icon-btn hide-sm" id="fullBtn" type="button" title="Toàn màn hình" aria-label="Toàn màn hình" hidden><svg class="ico"><use href="#i-full"/></svg></button>
+        <a class="icon-btn" id="openBtn" target="_blank" rel="noopener" title="Mở trong tab mới" aria-label="Mở trong tab mới" hidden><svg class="ico"><use href="#i-ext"/></svg></a>
+      </div>
+    </header>
+
+    <div class="content" id="content">
+      <section class="home" id="home" aria-labelledby="homeTitle"></section>
+      <section class="viewer" id="viewer" hidden>
+        <iframe id="frame" title="Tài liệu"></iframe>
+        <div class="loading" id="loading" hidden><div class="spinner"></div><span>Đang mở tài liệu…</span></div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
