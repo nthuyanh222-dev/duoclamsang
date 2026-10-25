@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="vi" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KDIGO AKI/AKD (dự thảo 03/2026) – Chương 3 và 4: phòng ngừa, điều trị và AKI do thuốc</title>
+<meta name="description" content="Tóm tắt trực quan Chương 3 và 4 của KDIGO AKI/AKD Public Review Draft (03/2026): bảng khuyến cáo, practice point, điểm không nhất quán, tình huống, trắc nghiệm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#a9b5c9;--bg2:#c4ccda;--card:#eef1f6;--card2:#dfe5ee;--line:#aab6c9;--tx:#0a1020;--mut:#2f3d54;--dim:#4a5a73;
+--surf:#fff;--surf2:#f4f6fb;--tnt:#e0e7ff;--tnt2:#eef2ff;--line2:#d7deea;--band:#c7d2fe;--bandt:#1e1b4b;
+--g:#15803d;--gb:#dcfce7;--gt:#14532d;--w:#a16207;--wb:#fef3c7;--wt:#713f12;--b:#b91c1c;--bb:#fee2e2;--bt:#7f1d1d;--n:#1d4ed8;--nb:#dbeafe;--nt:#1e3a8a;
+--ind:#3730a3;--indt:#3730a3;--navy:#17407e;
+--mild:#15803d;--mild-bg:#dcfce7;--mod:#a16207;--mod-bg:#fef3c7;--sev:#b91c1c;--sev-bg:#fee2e2;--life:#5b1030;--life-bg:#f6dce6;}
+:root[data-theme="warm"]{--bg1:#e6d8bb;--bg2:#f3ead6;--card:#fbf5e8;--card2:#f0e6d0;--line:#d4c4a1;--tx:#2a2116;--mut:#5a4a33;--dim:#6b5a40;
+--surf:#fffdf7;--surf2:#f8f1e1;--tnt:#f1e3c4;--tnt2:#f6ecd5;--line2:#e6d9bb;--band:#e8d6a8;--bandt:#4a3410;
+--ind:#8a4b0f;--indt:#7a3f0a;--navy:#7a4a12;--n:#9a3412;}
+:root[data-theme="dark"]{--bg1:#0b1220;--bg2:#111a2e;--card:#16213a;--card2:#1e2b4a;--line:#33466b;--tx:#e8edf8;--mut:#b4c0d8;--dim:#93a3c4;
+--surf:#1b2a4a;--surf2:#203154;--tnt:#2a3a66;--tnt2:#243457;--line2:#2f4064;--band:#2f3f78;--bandt:#e0e7ff;
+--g:#4ade80;--gb:#12361f;--gt:#bbf7d0;--w:#fbbf24;--wb:#3a2d0b;--wt:#fde68a;--b:#f87171;--bb:#3d1620;--bt:#fecaca;--nb:#14284f;--nt:#bfdbfe;--n:#93c5fd;
+--ind:#4f46e5;--indt:#c7d2fe;--navy:#3b5bdb;
+--mild-bg:#12361f;--mod-bg:#3a2d0b;--sev-bg:#3d1620;--life-bg:#3a1226;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--tx);background:linear-gradient(180deg,var(--bg1),var(--bg2));background-color:var(--bg2);min-height:100vh;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1360px;margin:0 auto;padding:16px}
+header.top{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 18px;box-shadow:0 6px 20px rgba(10,16,32,.10)}
+header.top h1{margin:0;font-size:1.25rem;font-weight:800;color:var(--indt);letter-spacing:-.01em}
+header.top p{margin:2px 0 0;font-size:.82rem;color:var(--mut);max-width:860px}
+.ico{width:46px;height:46px;flex:none}
+.ico svg{width:100%;height:100%;display:block}
+.sp{flex:1}
+.ainote{margin:12px 0 0;background:var(--wb);border:1px solid #fcd34d;color:var(--wt);border-radius:12px;padding:10px 14px;font-size:.8rem;font-weight:600}
+.ainote p{margin:4px 0 0;font-weight:500}
+nav.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+nav.tabs button{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--card2);color:var(--tx);border-radius:14px;padding:8px 14px 8px 8px;font-weight:700;font-size:.85rem;cursor:pointer;font-family:inherit}
+nav.tabs button .ico{width:30px;height:30px}
+nav.tabs button[aria-selected="true"]{background:var(--ind);color:#fff;border-color:var(--indt);box-shadow:0 4px 14px rgba(55,48,163,.35)}
+nav.tabs button:hover:not([aria-selected="true"]){background:var(--surf)}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #818cf8;outline-offset:2px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 6px 20px rgba(10,16,32,.08);margin-bottom:14px}
+.panel[hidden]{display:none}
+.panel h2{margin:0 0 4px;font-size:1.05rem;font-weight:800;color:var(--indt)}
+.panel h3{margin:0 0 6px;font-size:.92rem;font-weight:800;color:var(--indt)}
+.sub{margin:0 0 12px;color:var(--mut);font-size:.82rem}
+.ref{color:var(--n);font-weight:700;font-size:.72rem;display:block;margin-top:2px}
+.cnt{font-size:.78rem;color:var(--mut);font-weight:600;margin:0 0 8px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--surf);border-radius:999px;padding:4px 11px;font-size:.74rem;font-weight:700;color:var(--mut);cursor:pointer;font-family:inherit}
+.chip[aria-pressed="true"]{background:var(--tnt);color:var(--indt);border-color:#818cf8}
+.search{border:1px solid var(--line);border-radius:10px;padding:7px 10px;font-size:.84rem;font-family:inherit;background:var(--surf);color:var(--tx);min-width:220px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.tw{border:1px solid var(--line);border-radius:14px;background:var(--surf)}
+.tw .sc{overflow-x:visible}
+table.rs{width:100%;border-collapse:collapse;font-size:.78rem}
+table.rs th,table.rs td{padding:8px 9px;vertical-align:top;overflow-wrap:anywhere;border-bottom:1px solid var(--line2);text-align:left}
+table.rs thead th{background:var(--ind);color:#fff;font-size:.8rem}
+table.rs tbody tr:nth-child(even) td{background:var(--surf2)}
+td.num{font-weight:800;color:var(--indt);width:42px}
+td.drug{min-width:130px;overflow-wrap:normal!important}
+td.drug b{color:var(--indt)}
+#td td.num,#td th:nth-child(2){width:120px}
+#td td.num{white-space:normal}
+.grp{display:inline-block;margin-top:4px;background:var(--tnt);color:var(--indt);border-radius:999px;padding:1px 9px;font-size:.68rem;font-weight:700}
+.ev{display:inline-block;min-width:24px;text-align:center;border-radius:999px;padding:1px 8px;font-weight:800;font-size:.72rem;margin-right:4px}
+.ev.A{background:var(--gb);color:var(--gt)}.ev.D{background:var(--nb);color:var(--nt)}.ev.B{background:var(--wb);color:var(--wt)}
+.evn{display:block;font-size:.72rem;color:var(--mut);margin-top:4px}
+.empty{text-align:center;color:var(--mut);padding:18px!important}
+.flag{display:inline-block;margin-top:4px;background:var(--wb);border:1px solid #fcd34d;color:var(--wt);border-radius:8px;padding:2px 8px;font-size:.72rem;font-weight:700}
+.cap{display:inline-block;background:var(--bb);color:var(--bt);border-radius:8px;padding:2px 8px;font-weight:800;font-size:.74rem}
+.chipcn{display:inline-block;background:var(--wb);color:var(--wt);border:1px solid #fcd34d;border-radius:999px;padding:1px 9px;font-size:.7rem;font-weight:800}
+
+/* thang mức độ */
+.ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
+.step{border:2px solid var(--line);background:var(--surf);border-radius:14px;padding:9px 10px;cursor:pointer;font-family:inherit;text-align:left;color:var(--tx)}
+.step .nm{display:block;font-weight:800;font-size:.9rem}
+.step .mt{display:block;font-size:.72rem;color:var(--mut);font-weight:600}
+.step[data-k="nhe"]{--c:var(--mild)}.step[data-k="vua"]{--c:var(--mod)}.step[data-k="nang"]{--c:var(--sev)}.step[data-k="doa"]{--c:var(--life)}
+.step[aria-pressed="true"]{border-color:var(--c);background:var(--c);color:#fff;box-shadow:0 4px 14px rgba(10,16,32,.25)}
+.step[aria-pressed="true"] .mt{color:#fff}
+.sevpanel{display:grid;grid-template-columns:1fr 1fr;gap:14px;border:2px solid var(--c);background:var(--surf);border-radius:14px;padding:12px 14px;border-left-width:8px}
+.sevpanel .rule,.sevpanel .where{font-size:.78rem;color:var(--mut);margin:0 0 8px;font-weight:600}
+dl.signs{margin:0;display:grid;grid-template-columns:150px 1fr;gap:4px 10px;font-size:.78rem}
+dl.signs dt{font-weight:800;color:var(--indt)}dl.signs dd{margin:0}
+ul.acts{margin:0;padding-left:18px;font-size:.8rem}ul.acts li{margin-bottom:6px}
+
+/* ma trận nhanh */
+.qmw{overflow-x:auto}
+.qm{width:100%;min-width:760px;table-layout:fixed;border-collapse:separate;border-spacing:4px;font-size:.78rem}
+.qm th{background:var(--ind);color:#fff;padding:8px;border-radius:8px}
+.qm td.lab{background:var(--card2);font-weight:800;color:var(--indt);padding:8px;border-radius:8px;width:16%}
+.qm td.q{padding:8px;border-radius:8px;overflow-wrap:anywhere;font-weight:600;border:1px solid rgba(10,16,32,.10)}
+.qg{background:var(--gb);color:var(--gt)}.qw{background:var(--wb);color:var(--wt)}.qb{background:var(--bb);color:var(--bt)}.qn{background:var(--nb);color:var(--nt)}.qd{background:#7f1d1d;color:#fff}
+.legend{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0;font-size:.76rem;font-weight:700;align-items:center}
+.legend span.k{padding:3px 10px;border-radius:999px;border:1px solid rgba(10,16,32,.12)}
+.legend a{color:var(--n);text-decoration:underline}
+
+/* đường đi */
+.path{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.stage{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+.stage .n{display:inline-flex;width:26px;height:26px;border-radius:50%;background:var(--ind);color:#fff;font-weight:800;align-items:center;justify-content:center;font-size:.8rem;margin-bottom:4px}
+.stage ul,.gate ul,.box ul,.admit ul{margin:6px 0 0;padding-left:16px;font-size:.78rem}
+.stage li,.gate li,.box li,.admit li{margin-bottom:4px}
+.gates{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+.gate{border-radius:14px;padding:10px 12px;border:2px solid var(--line);background:var(--surf)}
+.gate.ok{border-color:var(--g);background:var(--gb)}.gate.part{border-color:#d97706;background:var(--wb)}.gate.bad{border-color:var(--b);background:var(--bb)}
+.admit{background:var(--surf);border:2px dashed var(--b);border-radius:14px;padding:10px 14px;margin-bottom:12px}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.box{background:var(--surf);border:2px solid var(--b);border-radius:14px;padding:10px 12px}
+.box.alt{border-color:#d97706}.box.dk{border-color:var(--indt)}
+
+/* công cụ liều */
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-bottom:12px}
+.form label{display:flex;flex-direction:column;gap:3px;font-size:.74rem;font-weight:700;color:var(--mut)}
+.form input,.form select{border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:.88rem;font-family:inherit;background:var(--surf);color:var(--tx)}
+.est{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 14px}
+.est div{background:var(--tnt);border-radius:12px;padding:8px 14px;font-weight:800;color:var(--indt);font-size:.86rem}
+.est small{display:block;font-weight:600;color:var(--mut);font-size:.7rem}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:10px}
+.rc{border-radius:14px;padding:12px;border:2px solid var(--c);background:var(--surf)}
+.rc h3{margin:0 0 6px;font-size:.88rem;font-weight:800;color:var(--c)}
+.badge{display:inline-block;padding:2px 10px;border-radius:999px;font-size:.7rem;font-weight:800;margin-bottom:6px}
+.s-ok{background:var(--gb);color:var(--gt)}.s-warn{background:var(--wb);color:var(--wt)}.s-na{background:var(--nb);color:var(--nt)}
+.rc .dose{font-weight:800;font-size:.9rem;margin-bottom:6px}
+.rc ul{margin:0;padding-left:16px;font-size:.76rem;color:var(--mut)}
+.disc{font-size:.76rem;color:var(--mut);margin-top:10px}
+.warn{background:var(--wb);border:1px solid #fcd34d;color:var(--wt);border-radius:10px;padding:8px 12px;font-size:.8rem;font-weight:600}
+
+/* tình huống */
+.cases{display:grid;gap:12px}
+.case{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.case h3{margin:0 0 8px;font-size:.92rem;color:var(--indt);font-weight:800}
+.case .row{display:grid;grid-template-columns:120px 1fr;gap:8px;font-size:.8rem;padding:4px 0;border-top:1px dashed var(--line2)}
+.case .row b{font-weight:800}
+.case .row.p b{color:var(--g)}.case .row.a b{color:var(--w)}.case .row.x b{color:var(--b)}.case .row.y b{color:var(--indt)}
+
+/* trắc nghiệm */
+.qh{font-weight:800;font-size:.95rem;margin:6px 0 10px}
+.opt{display:block;width:100%;text-align:left;border:2px solid var(--line);background:var(--surf);border-radius:12px;padding:9px 12px;margin-bottom:8px;font-weight:600;font-size:.84rem;cursor:pointer;font-family:inherit;color:var(--tx)}
+.opt:hover:not([disabled]){border-color:#818cf8;background:var(--tnt2)}
+.opt.ok{border-color:var(--g);background:var(--gb)}.opt.no{border-color:var(--b);background:var(--bb)}
+.expl{background:var(--tnt2);border-left:4px solid var(--ind);padding:8px 12px;border-radius:8px;font-size:.8rem;margin:8px 0}
+.btn{border:0;background:var(--ind);color:#fff;border-radius:12px;padding:8px 18px;font-weight:800;font-size:.84rem;cursor:pointer;font-family:inherit}
+.btn.alt{background:var(--surf);color:var(--indt);border:1px solid var(--ind)}
+
+/* chú giải, nguồn */
+.sec ol{margin:0;padding-left:18px;font-size:.8rem}
+table.gl{width:100%;table-layout:fixed;border-collapse:collapse;font-size:.76rem;margin-bottom:12px}
+table.gl th,table.gl td{border-bottom:1px solid var(--line2);padding:6px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+table.gl th{background:var(--band);color:var(--bandt)}
+table.gl td:first-child{font-weight:800;color:var(--indt);width:16%}
+.two{display:grid;grid-template-columns:1.2fr 1fr;gap:14px;font-size:.8rem}
+.two ul{margin:0;padding-left:18px}.two li{margin-bottom:5px}
+.refs{font-size:.76rem;color:var(--mut);list-style:none;padding-left:0!important}
+footer{font-size:.72rem;color:var(--mut);text-align:center;padding:10px 0 24px}
+
+@media(max-width:900px){
+ .ladder{grid-template-columns:repeat(2,1fr)}.path,.cols,.gates,.two,.sevpanel{grid-template-columns:1fr}
+ .case .row{grid-template-columns:1fr}dl.signs{grid-template-columns:120px 1fr}
+ .tw{overflow-x:auto}table.rs{min-width:640px}
+}
+@media(max-width:640px){.wrap{padding:10px}.search{min-width:0;width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{nav.tabs,.filters,.ladder,.btn{display:none}body{background:var(--surf)}.panel{break-inside:avoid-page}}
+
+html[data-theme="dark"] .rc h3{color:var(--indt)}
+html[data-theme="dark"] .ico svg{filter:brightness(.95)}
+
+/* thanh trên cùng */
+.topbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:4px 2px 12px}
+.brand{font-weight:800;font-size:1.15rem;color:var(--tx);letter-spacing:-.01em}
+.brand span{color:var(--indt);font-size:.95rem;font-weight:700;margin-left:4px}
+.seg{display:flex;gap:2px;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:3px}
+.seg button{border:0;background:transparent;border-radius:9px;padding:7px 12px;font-weight:700;font-size:.82rem;display:flex;align-items:center;gap:7px;color:var(--tx);cursor:pointer;font-family:inherit}
+.seg button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.seg .dot{width:11px;height:11px;border-radius:50%;border:1px solid rgba(10,16,32,.35);display:inline-block}
+.dot.l{background:#fff}.dot.w{background:#e6d9b8}.dot.d{background:#1a2238}
+.seg button[aria-pressed="true"] .dot{border-color:#fff}
+.pb{border:1px solid var(--line);background:var(--surf);border-radius:10px;padding:8px 14px;font-weight:700;font-size:.82rem;color:var(--tx);cursor:pointer;font-family:inherit}
+.pb[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.pb:disabled{opacity:.55;cursor:not-allowed}
+.pb:hover:not(:disabled):not([aria-pressed="true"]){background:var(--tnt2)}
+header.top{position:relative;overflow:hidden;padding-top:26px}
+header.top::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,#2f5bea,#7c3aed,#d97706,#0f766e,#475569,#be185d)}
+.eyebrow{width:100%;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--indt)}
+
+.docinfo{margin-top:12px}
+.docinfo dl{margin:6px 0 0;display:grid;grid-template-columns:170px 1fr;gap:0;font-size:.8rem}
+.docinfo dt,.docinfo dd{margin:0;padding:6px 8px;border-bottom:1px solid var(--line2)}
+.docinfo dt{font-weight:800;color:var(--indt)}
+.ainote{font-size:.84rem}
+@media(max-width:640px){.docinfo dl{grid-template-columns:1fr}.docinfo dt{border-bottom:0;padding-bottom:0}}
+@media print{.topbar{display:none}html[data-theme]{--bg1:#a9b5c9;--bg2:#c4ccda;--card:#eef1f6;--card2:#dfe5ee;--line:#aab6c9;--tx:#0a1020;--mut:#2f3d54;--dim:#4a5a73;--surf:#fff;--surf2:#f4f6fb;--tnt:#e0e7ff;--tnt2:#eef2ff;--line2:#d7deea;--band:#c7d2fe;--bandt:#1e1b4b;--g:#15803d;--gb:#dcfce7;--gt:#14532d;--w:#a16207;--wb:#fef3c7;--wt:#713f12;--b:#b91c1c;--bb:#fee2e2;--bt:#7f1d1d;--n:#1d4ed8;--nb:#dbeafe;--nt:#1e3a8a;--ind:#3730a3;--indt:#3730a3;--navy:#17407e;--mild:#15803d;--mild-bg:#dcfce7;--mod:#a16207;--mod-bg:#fef3c7;--sev:#b91c1c;--sev-bg:#fee2e2;--life:#5b1030;--life-bg:#f6dce6;--bg1:#fff;--bg2:#fff}}
+
+/* bổ sung cho trang ACG */
+.st{display:inline-block;border-radius:999px;padding:1px 9px;font-weight:800;font-size:.72rem}
+.st.S{background:var(--gb);color:var(--gt)}.st.C{background:var(--wb);color:var(--wt)}
+.ev.mod{background:var(--nb);color:var(--nt)}.ev.low{background:var(--tnt);color:var(--indt)}.ev.vlow{background:var(--bb);color:var(--bt)}
+.neg{display:inline-block;margin-left:4px;background:var(--bb);color:var(--bt);border-radius:8px;padding:0 7px;font-size:.68rem;font-weight:800}
+tr.hl td{outline:2px solid #818cf8;outline-offset:-2px;background:var(--tnt2)!important}
+.mx{display:grid;grid-template-columns:110px 1fr 1fr;gap:6px;font-size:.78rem}
+.mx>div{border-radius:10px;padding:8px}
+.mx .h{background:var(--ind);color:#fff;font-weight:800;text-align:center}
+.mx .r{background:var(--card2);color:var(--indt);font-weight:800;display:flex;align-items:center}
+.mx .c{background:var(--surf);border:1px solid var(--line2);display:flex;gap:5px;flex-wrap:wrap;align-content:flex-start;min-height:54px}
+.mx .c.S{background:var(--gb)}.mx .c.C{background:var(--wb)}
+.rb{border:1px solid rgba(10,16,32,.2);background:var(--surf);color:var(--tx);border-radius:8px;padding:2px 9px;font-weight:800;font-size:.76rem;cursor:pointer;font-family:inherit}
+.rb:hover{background:var(--tnt)}
+.ico3{display:block;width:100%;height:100%}
+.note{font-size:.78rem;color:var(--mut);margin:6px 0 0}
+.lbl{font-size:.74rem;font-weight:800;color:var(--indt)}
+.calc2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:900px){.calc2{grid-template-columns:1fr}.mx{grid-template-columns:80px 1fr 1fr}}
+table.rs td.vt{min-width:150px}
+.st,.ev{white-space:nowrap}
+table.rs td.nw{min-width:96px;overflow-wrap:normal}
+
+.tg{background:var(--gb);color:var(--gt)}.tw2{background:var(--wb);color:var(--wt)}.tb{background:var(--bb);color:var(--bt)}.tn{background:var(--nb);color:var(--nt)}.ti{background:var(--tnt);color:var(--indt)}
+.mx .c.tg{background:var(--gb)}.mx .c.tw2{background:var(--wb)}.mx .c.tb{background:var(--bb)}.mx .c.tn{background:var(--nb)}.mx .c.ti{background:var(--tnt2)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+
+<linearGradient id="g-ped" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d9deea"/></linearGradient>
+<linearGradient id="g-ind" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#818cf8"/><stop offset="1" stop-color="#3730a3"/></linearGradient>
+<linearGradient id="g-teal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5eead4"/><stop offset="1" stop-color="#0f766e"/></linearGradient>
+<linearGradient id="g-amb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#d97706"/></linearGradient>
+<linearGradient id="g-blu" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0369a1"/></linearGradient>
+<linearGradient id="g-red" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fca5a5"/><stop offset="1" stop-color="#b91c1c"/></linearGradient>
+<radialGradient id="r-sh" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#0a1020" stop-opacity=".28"/><stop offset="1" stop-color="#0a1020" stop-opacity="0"/></radialGradient>
+<radialGradient id="r-hi" cx=".3" cy=".25" r=".7"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+
+
+</defs></svg>
+<div class="wrap">
+<div class="topbar">
+  <div class="brand" id="brand"></div>
+  <div class="sp"></div>
+  <div class="seg" role="group" aria-label="Chế độ nền">
+    <button type="button" data-th="light" aria-pressed="true"><span class="dot l"></span>Sáng</button>
+    <button type="button" data-th="warm" aria-pressed="false"><span class="dot w"></span>Ấm</button>
+    <button type="button" data-th="dark" aria-pressed="false"><span class="dot d"></span>Tối</button>
+  </div>
+  <button type="button" class="pb" aria-pressed="true" id="lang-vi">VI</button>
+  <button type="button" class="pb" id="lang-en" disabled title="Bản tiếng Anh chưa có">EN</button>
+  <button type="button" class="pb" id="print-btn">In trang đang xem</button>
+</div>
+<header class="top">
+  <div class="eyebrow" id="eyebrow"></div>
+  <div class="ico" id="hico"></div>
+  <div><h1 id="h1"></h1></div>
+</header>
+<section class="panel docinfo" aria-label="Thông tin tài liệu">
+  <h2>Thông tin tài liệu</h2>
+  <dl id="docdl"></dl>
+</section>
+<noscript><p class="ainote">Trang này cần bật JavaScript để hiển thị bảng, bộ lọc và công cụ tính.</p></noscript>
+<nav class="tabs" id="tabs" role="tablist" aria-label="Nội dung"></nav>
+
+<div class="panel" id="p-rec" role="tabpanel">
+  <h2 id="rec-h"></h2>
+  <p class="sub" id="rec-sub"></p>
+  <div class="filters">
+    <div class="chips" id="gchips" role="group" aria-label="Lọc theo nhóm"></div>
+    <div class="chips" id="schips" role="group" aria-label="Lọc theo mức khuyến cáo"></div>
+    <div class="chips" id="echips" role="group" aria-label="Lọc theo mức chứng cứ"></div>
+    <label class="sr-only" for="q">Tìm trong bảng khuyến cáo</label>
+    <input class="search" id="q" type="search" placeholder="Tìm trong bảng khuyến cáo…">
+  </div>
+  <p class="cnt" id="count" aria-live="polite"></p>
+  <div class="tw"><table class="rs" id="recs"></table></div>
+</div>
+
+<div class="panel" id="p-mx" role="tabpanel" hidden>
+  <h2>Ma trận mức khuyến cáo × mức chứng cứ</h2>
+  <p class="sub">Bấm số khuyến cáo để mở dòng tương ứng. Ô trống nghĩa là không có khuyến cáo nào ở mức đó.</p>
+  <div class="mx" id="mx"></div>
+  <p class="note" id="mx-note"></p>
+  <div id="kc-wrap"><h2 style="margin-top:16px" id="kc-h"></h2>
+  <div class="tw"><table class="rs" id="kc"></table></div></div>
+</div>
+
+<div class="panel" id="p-calc" role="tabpanel" hidden>
+  <h2 id="calc-h"></h2>
+  <p class="sub" id="calc-sub"></p>
+  <div id="calc-body"></div>
+  <p class="disc" id="calc-disc"></p>
+</div>
+
+<div class="panel" id="p-inc" role="tabpanel" hidden>
+  <h2 id="inc-h"></h2>
+  <p class="sub" id="inc-sub"></p>
+  <div class="tw"><table class="rs" id="inc"></table></div>
+</div>
+
+<div class="panel" id="p-val" role="tabpanel" hidden>
+  <h2>Khả năng áp dụng tại bệnh viện</h2>
+  <p class="sub">Danh sách điểm cần thẩm định. Chưa đối chiếu với danh mục thuốc hay phác đồ nội bộ vì chưa được cung cấp.</p>
+  <div class="tw"><table class="rs" id="val"></table></div>
+</div>
+
+<div class="panel" id="p-case" role="tabpanel" hidden>
+  <h2>Tình huống minh hoạ (AI soạn, không phải ca thật)</h2>
+  <p class="sub">Mỗi tình huống dẫn số dòng khuyến cáo làm cơ sở và giữ mức chứng cứ của dòng gốc.</p>
+  <div class="cases" id="cases"></div>
+</div>
+
+<div class="panel" id="p-quiz" role="tabpanel" hidden>
+  <h2>Trắc nghiệm ôn nhanh</h2>
+  <p class="sub" id="qprog"></p>
+  <div id="quiz"></div>
+</div>
+
+<div class="panel sec" id="p-ref" role="tabpanel" hidden>
+  <h2>Chú giải từ viết tắt</h2>
+  <table class="gl" id="gloss"></table>
+  <div class="two">
+    <div><h3>Kiểm tra trước khi giao</h3><ul id="selfcheck"></ul></div>
+    <div><h3>Nguồn</h3><ul class="refs" id="sources"></ul></div>
+  </div>
+</div>
+
+<footer id="foot"></footer>
+</div>
+
+<script type="application/json" id="data">{"schema": "tom-tat-guideline/v1", "meta": {"title": "KDIGO AKI/AKD (dự thảo 03/2026) – Chương 3 và 4: phòng ngừa, điều trị và AKI do thuốc", "desc": "Tóm tắt trực quan Chương 3 và 4 của KDIGO AKI/AKD Public Review Draft (03/2026): bảng khuyến cáo, practice point, điểm không nhất quán, tình huống, trắc nghiệm.", "brand": "ClinPharmAI", "brand_sub": "/ Clinical Hub", "eyebrow": "Dành cho bác sĩ & dược sĩ lâm sàng", "short": "KDIGO AKI/AKD Ch.3–4", "docinfo": [["Tên guideline", "KDIGO 2027 Clinical Practice Guideline for Acute Kidney Injury (AKI) and Acute Kidney Disease (AKD), Public Review Draft"], ["Tổ chức ban hành", "Kidney Disease: Improving Global Outcomes (KDIGO). Danh sách Work Group ở tr. xiii, chưa trích"], ["Năm / cập nhật", "Public Review Draft, tháng 3/2026; cập nhật của KDIGO 2012; tìm tài liệu đến 6/2025 (tr. i, xii, xiv)"], ["DOI / PMID", "Không nêu trong các trang đầu của file (bản dự thảo)"], ["Quần thể đích", "Trẻ em và người lớn có nguy cơ hoặc đang AKI/AKD (tr. xiv); có điều kiện riêng ở từng dòng"], ["Hệ thống phân mức", "GRADE (tr. xiv). Trong phạm vi đã đọc: Level 1 12 dòng, Level 2 10 dòng; chứng cứ A 3, B 9, C 7, D 3. Hai câu có hai nhãn (3.5.2 và 4.10.1) được tách thành 2 dòng, nên 20 câu thành 22 dòng. Practice point không gắn mức (trừ PP 4.9.1.2 ghi 1B)"], ["Phạm vi đã trích", "Chương 3 (tr. 118–192) và Chương 4 (tr. 194–245); phần tóm tắt tr. 10–23. Trang PDF = trang in + 14. Không trích Ch.1, 2, 5, 6, Methods, References. Đã đọc mọi câu khuyến cáo/practice point và đoạn chứng cứ; Key information, rationale và bảng chỉ đọc có chọn lọc. Xem ảnh Hình 9 và 12; Hình 11 và Bảng 34 chỉ đọc bằng văn bản"], ["Lưu ý phiên bản", "Bản dự thảo xin ý kiến, nội dung sẽ thay đổi và không dùng cho mục đích khác ngoài mục đích ban đầu (tr. i). [CẦN THẨM ĐỊNH] quyền sử dụng trước khi đăng công khai hay đưa vào công cụ; tên bản ghi 2027"]], "rec_sub": "Vị trí ghi theo trang in. Mỗi dòng giữ nguyên mức khuyến cáo và mức chứng cứ trong câu của tài liệu.", "search_hint": "Tìm: dopamine, bicarbonate, RASi, cản quang…", "kc_title": "Practice point (không chấm mức)", "inc_sub": "Mỗi điểm ghi hai vị trí và nội dung từng bên. Không tự chọn một phía.", "sources": ["Kidney Disease: Improving Global Outcomes (KDIGO) Acute Kidney Injury Work Group. KDIGO 2027 Clinical Practice Guideline for Acute Kidney Injury (AKI) and Acute Kidney Disease (AKD): Public Review Draft [Internet]. KDIGO; 2026 Mar [cited 2026 Oct 23]. 499 p. Chương 3–4."], "ai_label": "Tóm tắt có hỗ trợ AI – cần đối chiếu nguyên văn trước khi áp dụng lâm sàng.", "footer": "Khoa Dược lâm sàng · Tóm tắt guideline trực quan · KDIGO AKI/AKD (dự thảo 03/2026), Chương 3–4"}, "groups": ["3.1 Dịch truyền", "3.2 Huyết động", "3.3 Lợi tiểu", "3.5 Phẫu thuật tim", "3.6–3.7 HRS và TLS", "3.12 Trẻ em", "4.2 Quản lý thuốc/độc thận", "4.9 Thuốc cản quang", "4.10–4.11 Tạm ngưng thuốc"], "strengths": [{"k": "1", "label": "Level 1 (We recommend)", "tone": "tg"}, {"k": "2", "label": "Level 2 (We suggest)", "tone": "tw2"}], "certainty": [{"k": "A", "label": "A (High)", "tone": "tn"}, {"k": "B", "label": "B (Moderate)", "tone": "ti"}, {"k": "C", "label": "C (Low)", "tone": "tw2"}, {"k": "D", "label": "D (Very low)", "tone": "tb"}], "recs": [{"g": 0, "loc": "tr. 118, 122; tóm tắt tr. 10", "kw": "crystalloids rather than colloids", "s": "1", "neg": 0, "c": "B", "pop": "Trẻ em và người lớn có nguy cơ hoặc đang AKI/AKD, cần bù thể tích nội mạch ban đầu", "it": "Khuyến cáo dùng dịch tinh thể thay cho dịch keo (albumin, gelatin, tinh bột) để bù thể tích nội mạch ban đầu. Nhãn 1B nằm ở câu khuyến cáo; phần rationale lại ghi chứng cứ low (Grade C), xem điểm không nhất quán 1. Sốc mất máu: chế phẩm máu là dịch được chọn; albumin vẫn có thể được cân nhắc ở tình huống đặc thù theo đánh giá chuyên môn và phải ghi rõ lý do. (tr. 118, 122)", "n": 1}, {"g": 0, "loc": "tr. 122, 124; tóm tắt tr. 10", "kw": "buffered crystalloids instead of 0.9% saline", "s": "1", "neg": 0, "c": "B", "pop": "Trẻ em và người lớn có nguy cơ hoặc đang AKI/AKD, cần bù thể tích, không có chấn thương sọ não", "it": "Khuyến cáo dùng dịch tinh thể đệm (buffered) thay cho NaCl 0,9% khi bù thể tích. Văn bản loại trừ chấn thương sọ não, và cũng không áp dụng khi chọn dịch để phòng AKI do TLS, sắc tố heme hoặc thuốc cản quang (xem điểm không nhất quán 7). Chứng cứ moderate ở người lớn bệnh nặng không có chấn thương sọ não: giảm tử vong, AKI và RRT so với NaCl 0,9%, không ghi nhận hại. (tr. 122, 124)", "n": 2}, {"g": 0, "loc": "tr. 127, 129; tóm tắt tr. 10", "kw": "intravenous bicarbonate over rrt", "s": "2", "neg": 0, "c": "C", "pop": "Trẻ em và người lớn AKI/AKD có toan chuyển hóa nặng kèm toan máu (pH <7,20)", "it": "Đề xuất dùng natri bicarbonat tĩnh mạch thay cho RRT, trừ khi có chỉ định RRT khẩn khác. Văn bản nêu ví dụ chỉ định khác: tăng kali máu kháng trị, quá tải thể tích nặng, hội chứng urê huyết có triệu chứng; cần theo dõi quá tải dịch, tăng natri máu, toan nội bào nghịch thường. Nhãn 2C ở câu khuyến cáo, trong khi đoạn chứng cứ ghi mức tổng thể high (điểm không nhất quán 2). (tr. 127, 129)", "n": 3}, {"g": 0, "loc": "tr. 130, 132; tóm tắt tr. 10", "kw": "liberal intravenous fluid management strategy", "s": "1", "neg": 0, "c": "B", "pop": "Người lớn phẫu thuật bụng lớn có chương trình", "it": "Khuyến cáo chiến lược truyền dịch tự do, mục tiêu cân bằng dịch dương 1–2 kg sau 24 giờ phẫu thuật, thay cho chiến lược hạn chế (cân bằng dịch bằng 0). Chứng cứ moderate: giảm AKI, AKI giai đoạn 3 và có thể giảm RRT, không khác biệt tử vong hay biến cố liên quan dịch. (tr. 130, 132)", "n": 4}, {"g": 1, "loc": "tr. 136, 140; tóm tắt tr. 10", "kw": "mean arterial pressure (map) of >65", "s": "2", "neg": 0, "c": "C", "pop": "Người lớn bệnh nặng có nguy cơ cao hoặc đang AKI", "it": "Đề xuất MAP >65 mm Hg làm mục tiêu hướng dẫn dịch và thuốc vận mạch. PP 3.2.3 cho phép mục tiêu cao hơn hoặc thấp hơn theo từng người (tăng huyết áp mạn; tránh tác dụng phụ vận mạch ở người hạ huyết áp mạn). Ở người tăng huyết áp mạn bệnh nặng, MAP đích ≥70 mm Hg giảm nhu cầu RRT nhưng tăng tử vong; chứng cứ tổng thể low. (tr. 136, 140)", "n": 5}, {"g": 1, "loc": "tr. 142, 143; tóm tắt tr. 11", "kw": "against using low-dose dopamine", "s": "1", "neg": 1, "c": "A", "pop": "Trẻ em và người lớn có nguy cơ hoặc đang AKI/AKD", "it": "Khuyến cáo không dùng dopamine liều thấp để bảo vệ thận. Chứng cứ high (dựa trên KDIGO 2012): không làm giảm AKI hay cải thiện kết cục, có bằng chứng hại gồm nhịp nhanh và thiếu máu cơ tim. Văn bản nêu không đưa dopamine liều thấp vào protocol hoặc order set bảo vệ thận hay điều trị AKI ở cả trẻ em và người lớn. (tr. 142, 143)", "n": 6}, {"g": 1, "loc": "tr. 144, 145, 146; tóm tắt tr. 11", "kw": "multicomponent kidney-protection strategy", "s": "1", "neg": 0, "c": "B", "pop": "Người lớn phẫu thuật có nguy cơ AKI cao, xác định bằng yếu tố lâm sàng và dấu ấn sinh học", "it": "Khuyến cáo chiến lược bảo vệ thận đa thành phần (Hình 9). Hình 9: ở nhóm nguy cơ cao ngưng thuốc độc thận khi có thể, tối ưu thể tích và áp lực tưới máu, cân nhắc theo dõi huyết động nâng cao, theo dõi thường xuyên dấu ấn chức năng và cấu trúc; từ giai đoạn 1 kiểm tra thay đổi liều thuốc và chẩn đoán phân biệt; giai đoạn 3 cân nhắc RRT cho AKI kéo dài hoặc chỉ định theo thử nghiệm lâm sàng. Chứng cứ moderate: giảm AKI giai đoạn 2–3 và MAKE90, không khác biệt tử vong hay RRT (xem điểm không nhất quán 8). (tr. 144, 145, 146)", "n": 7}, {"g": 2, "loc": "tr. 149, 150; tóm tắt tr. 11", "kw": "we suggest use of diuretics", "s": "2", "neg": 0, "c": "B", "pop": "Trẻ em và người lớn có hoặc nguy cơ AKI/AKD, quá tải thể tích có ý nghĩa lâm sàng", "it": "Đề xuất dùng lợi tiểu để xử trí quá tải thể tích có ý nghĩa lâm sàng. PP 3.3.1: ở người lớn, khởi đầu bằng bolus ngắt quãng lợi tiểu quai thay vì truyền liên tục. Chứng cứ tổng thể moderate (dựa trên tổng quan Cochrane). (tr. 149, 150)", "n": 8}, {"g": 2, "loc": "tr. 153, 154; tóm tắt tr. 11", "kw": "initial use of diuretics in preference to", "s": "1", "neg": 0, "c": "C", "pop": "Người lớn có hoặc nguy cơ AKI/AKD, quá tải thể tích có ý nghĩa lâm sàng, không có chỉ định RRT khác", "it": "Khuyến cáo ưu tiên dùng lợi tiểu ban đầu thay cho loại bỏ dịch ngoài cơ thể. Chứng cứ low: không khác biệt tử vong giữa lợi tiểu và RRT; không có thử nghiệm về kết cục đặc hiệu AKI hay biến cố bất lợi. (tr. 153, 154)", "n": 9}, {"g": 3, "loc": "tr. 156, 158; tóm tắt tr. 12", "kw": "prophylactic intravenous amino acid", "s": "2", "neg": 0, "c": "A", "pop": "Người lớn phẫu thuật tim, không có CKD tiến triển", "it": "Đề xuất có thể truyền axit amin tĩnh mạch dự phòng để phòng AKI. Chứng cứ high: giảm AKI mọi giai đoạn và giai đoạn 3; không khác biệt về RRT (do imprecision) hay chức năng thận dài hạn; không ghi nhận phản ứng bất lợi. Văn bản gọi đây là khuyến cáo Level 2 do giá trị và ưu tiên của người bệnh. (tr. 156, 158)", "n": 10}, {"g": 3, "loc": "tr. 159, 161; tóm tắt tr. 12", "kw": "remote ischemic preconditioning", "s": "2", "neg": 0, "c": "D", "pop": "Trẻ em có nguy cơ AKI cao phẫu thuật tim, không gây mê propofol", "it": "Đề xuất điều kiện hóa thiếu máu cục bộ từ xa (RIPC) ở trẻ em (nhãn 2D). Chứng cứ very low từ một nghiên cứu: có thể giảm AKI, ảnh hưởng tử vong và biến cố bất lợi chưa rõ. (tr. 159, 161)", "n": 11}, {"g": 3, "loc": "tr. 159, 161; tóm tắt tr. 12", "kw": "remote ischemic preconditioning", "s": "2", "neg": 0, "c": "B", "pop": "Người lớn có nguy cơ AKI cao phẫu thuật tim, không gây mê propofol", "it": "Đề xuất RIPC ở người lớn (nhãn 2B). Chứng cứ moderate: giảm AKI và khởi đầu RRT, không báo cáo biến cố bất lợi liên quan điều trị. (tr. 159, 161)", "n": 12}, {"g": 4, "loc": "tr. 162, 165, 166; tóm tắt tr. 12", "kw": "vasoconstrictor therapy for adults", "s": "1", "neg": 0, "c": "C", "pop": "Người lớn có AKI do hội chứng gan thận (HRS-AKI)", "it": "Khuyến cáo dùng thuốc co mạch. PP 3.6.1: terlipressin hoặc norepinephrine ưu tiên; midodrine kèm octreotide là lựa chọn thay thế nếu không có terlipressin và norepinephrine. Chứng cứ khác nhau theo thuốc: terlipressin moderate nhưng tăng mạnh biến cố nghiêm trọng tim, hô hấp, tiêu hóa; norepinephrine low; midodrine kèm octreotide very low. (tr. 162, 165, 166)", "n": 13}, {"g": 4, "loc": "tr. 169, 170, 171; tóm tắt tr. 12", "kw": "rasburicase over allopurinol or febuxostat", "s": "1", "neg": 0, "c": "B", "pop": "Trẻ em và người lớn có hoặc nguy cơ cao hội chứng ly giải u (TLS); không thiếu G6PD", "it": "Khuyến cáo rasburicase thay cho allopurinol hoặc febuxostat nếu không chống chỉ định do thiếu G6PD. PP 3.7.1: bù dịch tinh thể tĩnh mạch, không kiềm hóa nước tiểu. PP 3.7.2: nguy cơ TLS thấp hơn hoặc không dùng được rasburicase thì có thể dùng thuốc ức chế xanthine oxidase. Chứng cứ moderate ở trẻ em (giảm tử vong do TLS và AKI cần RRT, tăng biến cố nghiêm trọng); ở người lớn hạ xuống low do indirectness (điểm không nhất quán 4). (tr. 169, 170, 171)", "n": 14}, {"g": 5, "loc": "tr. 188, 189; tóm tắt tr. 14", "kw": "single dose of theophylline", "s": "1", "neg": 0, "c": "A", "pop": "Trẻ sơ sinh ngạt chu sinh nặng", "it": "Khuyến cáo một liều theophylline duy nhất để phòng AKI. Chứng cứ high: giảm mạnh AKI, có thể không ảnh hưởng tử vong; không có bằng chứng về biến cố nghiêm trọng trong các nghiên cứu báo cáo kết cục AKI. Câu khuyến cáo không nêu liều. (tr. 188, 189)", "n": 15}, {"g": 5, "loc": "tr. 190, 192; tóm tắt tr. 14", "kw": "against routine use of inhaled nitric oxide", "s": "1", "neg": 1, "c": "C", "pop": "Trẻ em có tổn thương tim độ phức tạp thấp, không có tăng áp phổi hay rối loạn thất phải, phẫu thuật tim có tuần hoàn ngoài cơ thể", "it": "Khuyến cáo không dùng thường quy nitric oxide hít để phòng AKI sau phẫu thuật tim. Chứng cứ low: không ảnh hưởng nguy cơ AKI, RRT, tử vong hay thời gian nằm viện; biến cố nghiêm trọng ước lượng không chính xác. (tr. 190, 192)", "n": 16}, {"g": 6, "loc": "tr. 198, 200, 202; tóm tắt tr. 15", "kw": "drug and nephrotoxin stewardship", "s": "1", "neg": 0, "c": "C", "pop": "Trẻ em và người lớn có hoặc nguy cơ AKI", "it": "Khuyến cáo quản lý thuốc và chất độc thận (stewardship) theo hướng đa phương thức. PP 4.2.1: ngưng thuốc độc thận nếu có thể; thay bằng thuốc tương đương ít độc thận nếu có và cần; giảm liều nếu phải tiếp tục thuốc có độc tính phụ thuộc liều. PP 4.2.2 TDM, PP 4.2.3 giám sát tương tác PK/PD, PP 4.2.4 truyền dịch phòng bệnh thận do tinh thể. Chứng cứ về chiến lược đa phương thức low hoặc very low nhưng vẫn Level 1 vì nguy cơ hại và khả năng giảm chi phí. Dược sĩ lâm sàng thường dẫn dắt hoạt động này. (tr. 198, 200, 202)", "n": 17}, {"g": 7, "loc": "tr. 227, 230; tóm tắt tr. 21", "kw": "prophylactic periprocedural volume expansion with 0.9% saline", "s": "1", "neg": 0, "c": "B", "pop": "Người lớn nguy cơ AKI cao, không quá tải dịch, làm thủ thuật có thuốc cản quang iod nội mạch", "it": "Khuyến cáo bù thể tích quanh thủ thuật bằng NaCl 0,9% thay cho dung dịch nhược trương (ví dụ 0,45%), natri bicarbonat hoặc không truyền dịch. Chứng cứ theo từng so sánh: high so với không bù dịch; low so với 0,45%; very low với bù dịch đường uống. Chưa có thử nghiệm ở trẻ em (điểm không nhất quán 9). (tr. 227, 230)", "n": 18}, {"g": 7, "loc": "tr. 234; tóm tắt tr. 22", "kw": "not routinely withholding renin-angiotensin", "s": "2", "neg": 1, "c": "C", "pop": "Người lớn làm thủ thuật có thuốc cản quang iod", "it": "Đề xuất không thường quy ngưng thuốc ức chế hệ renin-angiotensin (RASi) trước thủ thuật có thuốc cản quang iod. Chứng cứ low, ở người lớn làm thủ thuật tim mạch có cản quang: không khác biệt AKI giữa ngưng và không ngưng RASi (điểm không nhất quán 10). (tr. 234)", "n": 19}, {"g": 8, "loc": "tr. 236, 238; tóm tắt tr. 23", "kw": "elective major cardiac (2d)", "s": "2", "neg": 1, "c": "D", "pop": "Người lớn phẫu thuật tim lớn có chương trình", "it": "Đề xuất không thường quy ngưng RASi để phòng AKI (nhãn 2D). Chứng cứ very low từ một thử nghiệm nhỏ: ngưng RASi không đổi nguy cơ AKI hay tử vong, không có bằng chứng tăng kết cục tim kém. (tr. 236, 238)", "n": 20}, {"g": 8, "loc": "tr. 236, 238; tóm tắt tr. 23", "kw": "non-cardiac surgery (2b)", "s": "2", "neg": 1, "c": "B", "pop": "Người lớn phẫu thuật lớn không tim có chương trình", "it": "Đề xuất không thường quy ngưng RASi để phòng AKI (nhãn 2B). Chứng cứ moderate: ngưng RASi trước phẫu thuật không tim không đổi nguy cơ AKI, không có bằng chứng tăng kết cục tim kém. (tr. 236, 238)", "n": 21}, {"g": 8, "loc": "tr. 239, 240, 241; tóm tắt tr. 23", "kw": "temporarily stopping specific classes of drugs", "s": "2", "neg": 0, "c": "D", "pop": "Bệnh cấp dễ gây mất dịch (câu khuyến cáo không nêu rõ quần thể; chứng cứ ở người lớn)", "it": "Đề xuất tạm ngưng một số nhóm thuốc trong bệnh cấp dễ gây giảm thể tích để phòng AKI do giảm thể tích. Văn bản nêu các thuốc thường tạm ngưng: RASi, lợi tiểu, NSAID, metformin, và nêu thêm nguy cơ của sulfonylurea và metformin khi GFR giảm. Chứng cứ very low: không đổi nguy cơ AKI nhưng có thể tăng nhập viện ngoài kế hoạch. PP 4.11.1: truyền đạt rõ kế hoạch dùng lại thuốc và ghi vào hồ sơ. (tr. 239, 240, 241)", "n": 22}], "kc": [{"id": "PP 3.1.1", "loc": "tr. 130; tóm tắt tr. 10", "txt": "Cho uống bù nước (ORS) ở nơi không thể hoặc không thực tế truyền dịch tĩnh mạch.", "cond": "Trẻ em và người lớn có nguy cơ hoặc đang AKI/AKD"}, {"id": "PP 3.2.1", "loc": "tr. 134; tóm tắt tr. 10", "txt": "Dùng chiến lược theo dõi huyết động để đánh giá tưới máu và cung cấp oxy; tùy bối cảnh và nguồn lực.", "cond": "Người lớn có nguy cơ hoặc đang AKI"}, {"id": "PP 3.2.2", "loc": "tr. 135; tóm tắt tr. 10", "txt": "Dùng thuốc vận mạch kèm dịch khi hạ huyết áp không đáp ứng truyền dịch ban đầu.", "cond": "Trẻ em và người lớn có nguy cơ hoặc đang AKI"}, {"id": "PP 3.2.3", "loc": "tr. 136; tóm tắt tr. 10", "txt": "MAP đích cao hơn hoặc thấp hơn có thể phù hợp từng người (tăng huyết áp mạn; tránh tác dụng phụ vận mạch ở hạ huyết áp mạn).", "cond": "Người lớn bệnh nặng"}, {"id": "PP 3.2.4", "loc": "tr. 144; tóm tắt tr. 11", "txt": "Nên cân nhắc các chiến lược bảo vệ thận ở AKI/AKD đã xác lập.", "cond": "Trẻ em và người lớn AKI/AKD"}, {"id": "PP 3.3.1", "loc": "tr. 152; tóm tắt tr. 11", "txt": "Khởi đầu bằng bolus ngắt quãng lợi tiểu quai, không truyền liên tục.", "cond": "Người lớn có hoặc nguy cơ AKI/AKD"}, {"id": "PP 3.4.1", "loc": "tr. 155; tóm tắt tr. 11", "txt": "Insulin nhắm glucose huyết tương 140–180 mg/dl (7,8–10 mmol/l) là chấp nhận được so với mục tiêu tích cực hơn.", "cond": "Trẻ em và người lớn bệnh nặng có hoặc nguy cơ AKI/AKD"}, {"id": "PP 3.6.1", "loc": "tr. 162; tóm tắt tr. 12", "txt": "Chọn thuốc co mạch theo bối cảnh; ưu tiên terlipressin hoặc norepinephrine; midodrine kèm octreotide nếu hai thuốc kia không có.", "cond": "Người lớn HRS-AKI"}, {"id": "PP 3.7.1", "loc": "tr. 169; tóm tắt tr. 12", "txt": "Bù dịch tinh thể tĩnh mạch, không kiềm hóa nước tiểu.", "cond": "Trẻ em và người lớn có hoặc nguy cơ TLS"}, {"id": "PP 3.7.2", "loc": "tr. 170; tóm tắt tr. 12", "txt": "Có thể dùng thuốc ức chế xanthine oxidase.", "cond": "Nguy cơ TLS thấp hơn, hoặc rasburicase chống chỉ định hay không có"}, {"id": "PP 3.8.1", "loc": "tr. 174; tóm tắt tr. 12", "txt": "Dùng dịch tinh thể tĩnh mạch để bù thể tích.", "cond": "Nguy cơ hoặc có bệnh thận do sắc tố heme (tiêu cơ vân, tan máu)"}, {"id": "PP 3.9.1", "loc": "tr. 175; tóm tắt tr. 12", "txt": "Ưu tiên dinh dưỡng đường tiêu hóa.", "cond": "Trẻ em và người lớn có nguy cơ hoặc đang AKI/AKD"}, {"id": "PP 3.9.2", "loc": "tr. 175; tóm tắt tr. 12", "txt": "Tránh hạn chế protein với mục đích phòng ngừa hoặc trì hoãn RRT.", "cond": "Trẻ em và người lớn AKI/AKD"}, {"id": "PP 3.9.3", "loc": "tr. 176; tóm tắt tr. 13", "txt": "Tránh nạp protein quá mức.", "cond": "Người lớn AKI/AKD"}, {"id": "PP 3.9.4", "loc": "tr. 176; tóm tắt tr. 13", "txt": "Không cần đổi mục tiêu calo do AKI/AKD, trừ khi đang RRT.", "cond": "Trẻ em và người lớn"}, {"id": "PP 3.9.5", "loc": "tr. 177; tóm tắt tr. 13", "txt": "Nên cân nhắc rà soát định kỳ và bổ sung vitamin tan trong nước và vi chất.", "cond": "Trẻ em và người lớn đang CRRT"}, {"id": "PP 3.10.1", "loc": "tr. 177; tóm tắt tr. 13", "txt": "Cần điều trị đặc hiệu, gồm cân nhắc chấm dứt thai kỳ sớm.", "cond": "Phụ nữ mang thai AKI/AKD"}, {"id": "PP 3.11.1", "loc": "tr. 178; tóm tắt tr. 13", "txt": "Tìm nguyên nhân nhiễm trùng và môi trường đặc trưng vùng, điều trị đặc hiệu sớm kèm hỗ trợ chuẩn.", "cond": "AKD/AKI ở vùng nhiệt đới và cận nhiệt đới"}, {"id": "PP 3.11.2", "loc": "tr. 181; tóm tắt tr. 13", "txt": "Đưa AKI do độc chất vào chẩn đoán phân biệt.", "cond": "AKD/AKI ở vùng dùng thuốc y học cổ truyền và hóa chất độc"}, {"id": "PP 3.11.3", "loc": "tr. 185; tóm tắt tr. 13", "txt": "Cân nhắc tổn thương do nhiệt.", "cond": "AKD/AKI sau phơi nhiễm nhiệt độ cao kéo dài"}, {"id": "PP 3.12.1.1", "loc": "tr. 185; tóm tắt tr. 13", "txt": "Dùng mục tiêu huyết áp theo tuổi để hướng dẫn xử trí huyết động.", "cond": "Trẻ em có nguy cơ hoặc đang AKI"}, {"id": "PP 3.12.2.1", "loc": "tr. 186; tóm tắt tr. 13", "txt": "Dùng mục tiêu protein theo tuổi, không hạn chế; duy trì tối thiểu 2,5 g/kg mỗi ngày khi đang CRRT.", "cond": "Trẻ em AKI/AKD"}, {"id": "PP 3.12.2.2", "loc": "tr. 187; tóm tắt tr. 13", "txt": "Bổ sung thường quy vitamin tan trong nước.", "cond": "Trẻ em đang CRRT"}, {"id": "PP 3.12.3.1", "loc": "tr. 187; tóm tắt tr. 13", "txt": "Hợp lý khi dùng terlipressin hoặc norepinephrine tùy bối cảnh và tình trạng người bệnh.", "cond": "Trẻ em HRS-AKI"}, {"id": "PP 4.1.1", "loc": "tr. 194; tóm tắt tr. 15", "txt": "Thuốc có thể góp phần gây AKI được xếp vào 4 nhóm theo chức năng thận và dấu ấn tổn thương tại thời điểm phơi nhiễm (Hình 11). Ví dụ trong chú thích: trimethoprim, cimetidin (không rối loạn chức năng, không tổn thương); ACEi, ARB (rối loạn chức năng, không tổn thương); aminoglycosid, acyclovir, thuốc kháng VEGF (tổn thương, không rối loạn chức năng); NSAID (cả hai).", "cond": "Hình 11 chỉ đọc bằng văn bản"}, {"id": "PP 4.2.1", "loc": "tr. 202; tóm tắt tr. 16", "txt": "Xử trí AKD liên quan thuốc: ngưng thuốc độc thận nếu có thể; thay bằng thuốc tương đương ít độc thận nếu có và cần; giảm liều nếu phải tiếp tục thuốc có độc tính trực tiếp phụ thuộc liều.", "cond": "Thuốc gây tổn thương thận"}, {"id": "PP 4.2.2", "loc": "tr. 202; tóm tắt tr. 16", "txt": "TDM là thành phần của stewardship: đo nồng độ thuốc nối tiếp.", "cond": "Thuốc độc thận, thải trừ qua thận, hoặc biên độ điều trị hẹp, ở trẻ em và người lớn"}, {"id": "PP 4.2.3", "loc": "tr. 203; tóm tắt tr. 16", "txt": "Giám sát tương tác PK/PD làm tăng nguy cơ AKI.", "cond": "Là thành phần của stewardship đa phương thức"}, {"id": "PP 4.2.4", "loc": "tr. 205; tóm tắt tr. 16", "txt": "Có thể dùng truyền dịch tĩnh mạch để phòng bệnh thận do tinh thể do thuốc.", "cond": "Là thành phần của stewardship đa phương thức"}, {"id": "PP 4.3.1", "loc": "tr. 208; tóm tắt tr. 16", "txt": "Dược sĩ nên thực hiện đối chiếu thuốc, rà soát phác đồ thuốc và stewardship thuốc/độc thận.", "cond": "Trẻ em và người lớn nằm viện có hoặc nguy cơ AKI"}, {"id": "PP 4.3.2", "loc": "tr. 211; tóm tắt tr. 16", "txt": "Hệ thống hỗ trợ quyết định lâm sàng (CDSS) có thể là công cụ hiệu quả cho stewardship.", "cond": "Trẻ em và người lớn"}, {"id": "PP 4.4.1", "loc": "tr. 211; tóm tắt tr. 16", "txt": "Dấu ấn tổn thương ống thận được phê duyệt để theo dõi AKI do thuốc. Câu gốc không nêu cơ quan phê duyệt.", "cond": "Không nêu"}, {"id": "PP 4.4.2", "loc": "tr. 211; tóm tắt tr. 16", "txt": "Dấu ấn có thể hữu ích để phân biệt cơ chế và căn nguyên bệnh thận liên quan thuốc.", "cond": "Trẻ em và người lớn"}, {"id": "PP 4.5.1", "loc": "tr. 212; tóm tắt tr. 16", "txt": "Không dựa vào Clcr hoặc eGFR từ công thức giả định trạng thái ổn định của creatinin để chỉnh liều thuốc thải trừ qua thận.", "cond": "Trẻ em và người lớn AKI/AKD đang tiến triển hoặc hồi phục"}, {"id": "PP 4.5.2", "loc": "tr. 212; tóm tắt tr. 17", "txt": "Dùng xu hướng SCr và lượng nước tiểu để chỉnh liều; có thể tính KeGFR khi đủ số lần đo SCr.", "cond": "Người lớn AKI (KeGFR)"}, {"id": "PP 4.5.3", "loc": "tr. 213; tóm tắt tr. 17", "txt": "Cân nhắc và điều chỉnh liều khi GFR, yếu tố không-GFR của chất chỉ điểm lọc, hoặc thể tích phân bố chưa ổn định. Điểm lấy từ KDIGO 2024 CKD.", "cond": "Người bệnh nói chung, theo Work Group áp dụng cho AKI/AKD"}, {"id": "PP 4.5.4", "loc": "tr. 213, 214–215; tóm tắt tr. 17–19", "txt": "Đánh giá và chỉnh liều theo yếu tố thuốc, người bệnh và RRT (Bảng 34). Bảng 34: thuốc thải trừ qua thận có Vd <0,7 l/kg và/hoặc gắn protein <80% có khả năng bị CRRT loại bỏ; gợi ý bổ sung liều cho thuốc bị thải >30–40% sau thẩm tách; hạ albumin máu tăng phân suất tự do; bù dịch và thoát mạch mao mạch tăng Vd thuốc ưa nước, có thể cần liều nạp khoảng 25% cao hơn thường lệ; nếu RRT <25% độ thanh thải của người bệnh thì không bổ sung đáng kể; sắp xếp thải thuốc: CVVHDF > CVVH > IHD; pha loãng trước giảm độ thanh thải thuốc khoảng 15% so với pha loãng sau. Chú thích bảng: yếu tố liên quan RRT không áp dụng cho trẻ em (điểm không nhất quán 5).", "cond": "Trẻ em và người lớn đang CRRT"}, {"id": "PP 4.6.1", "loc": "tr. 216; tóm tắt tr. 20", "txt": "Khai thác kỹ tiền sử xã hội, nghề nghiệp, dân số để tìm phơi nhiễm thuốc trừ sâu và môi trường.", "cond": "Trẻ em và người lớn AKI mắc phải tại cộng đồng"}, {"id": "PP 4.6.2", "loc": "tr. 216; tóm tắt tr. 20", "txt": "Xác định và hạn chế sản phẩm tự nhiên có thể góp phần gây AKI/AKD qua trao đổi lấy người bệnh làm trung tâm.", "cond": "Không nêu"}, {"id": "PP 4.7.1", "loc": "tr. 217; tóm tắt tr. 20", "txt": "Cân nhắc chẩn đoán phân biệt AKI sau cản quang, có thể do nguyên nhân khác.", "cond": "AKI sau cản quang"}, {"id": "PP 4.8.1", "loc": "tr. 217; tóm tắt tr. 20", "txt": "Dùng công cụ đã thẩm định để đánh giá nguy cơ AKI.", "cond": "Người lớn dùng thuốc cản quang trong động mạch cho thủ thuật tim"}, {"id": "PP 4.8.2", "loc": "tr. 221; tóm tắt tr. 20", "txt": "Đánh giá yếu tố nguy cơ CA-AKI, đặc biệt sàng lọc suy giảm chức năng thận sẵn có.", "cond": "Trẻ em và người lớn dự kiến dùng thuốc cản quang đường tĩnh mạch"}, {"id": "PP 4.9.1.1", "loc": "tr. 222; tóm tắt tr. 20", "txt": "Quyết định dùng cản quang sau cân nhắc nguy cơ-lợi ích; khi lợi ích vượt nguy cơ thì không hoãn thủ thuật; dùng phương pháp hình ảnh thay thế cho người đã hoặc nguy cơ cao CA-AKI (Hình 12).", "cond": "Trẻ em và người lớn"}, {"id": "PP 4.9.1.2", "loc": "tr. 223; tóm tắt tr. 21", "txt": "Có thể dùng thuốc cản quang iod đẳng hoặc thấp thẩm thấu. Câu gốc mang nhãn (1B) dù là practice point (điểm không nhất quán 3).", "cond": "Trẻ em và người lớn có nguy cơ CA-AKI"}, {"id": "PP 4.9.1.3", "loc": "tr. 224; tóm tắt tr. 21", "txt": "Dùng liều cản quang thấp nhất có thể để đạt chất lượng hình ảnh.", "cond": "Trẻ em và người lớn nguy cơ cao CA-AKI"}, {"id": "PP 4.9.2.1", "loc": "tr. 225; tóm tắt tr. 21", "txt": "Đưa đánh giá tình trạng thể tích vào chiến lược truyền dịch.", "cond": "Trẻ em và người lớn nguy cơ cao CA-AKI"}, {"id": "PP 4.9.2.2", "loc": "tr. 232; tóm tắt tr. 22", "txt": "Khi không quá tải thể tích, hợp lý khi ngưng lợi tiểu lúc truyền dịch đẳng trương.", "cond": "Người lớn nguy cơ cao CA-AKI"}, {"id": "PP 4.9.3.1", "loc": "tr. 233; tóm tắt tr. 22", "txt": "Cản quang tĩnh mạch có thể xử trí theo đồng thuận hội X quang. Điểm lấy từ KDIGO 2024 CKD: ngưng thuốc độc thận không thiết yếu 24–48 giờ trước và 48 giờ sau cản quang khi AKI hoặc eGFR <30; metformin: không cần ngừng khi eGFR >30 và không AKI, ngừng khi AKI hoặc eGFR ≤30 và không dùng lại trong ít nhất 48 giờ; N-acetylcystein, vitamin C, furosemid, dopamin, fenoldopam, chẹn kênh canxi chưa cho lợi ích nhất quán; thẩm tách phòng ngừa quanh cản quang không khuyến cáo.", "cond": "AKI hoặc GFR <60 ml/phút/1,73 m² (CKD G3a–G5) làm thăm dò chương trình"}, {"id": "PP 4.11.1", "loc": "tr. 239; tóm tắt tr. 23", "txt": "Nếu ngưng thuốc trong bệnh cấp, truyền đạt rõ kế hoạch dùng lại cho người bệnh và nhân viên y tế, ghi hồ sơ. Điểm lấy từ KDIGO 2024 CKD.", "cond": "Theo Work Group áp dụng cho AKI/AKD"}, {"id": "PP 4.12.1.1", "loc": "tr. 244; tóm tắt tr. 23", "txt": "Dấu ấn nước tiểu về tổn thương thận có thể giúp phát hiện AKI do độc thận.", "cond": "Trẻ sơ sinh"}, {"id": "PP 4.12.2.1", "loc": "tr. 244; tóm tắt tr. 23", "txt": "Có thể dùng xu hướng SCr và lượng nước tiểu để chỉnh liều; giá trị của công thức KeGFR để chỉnh liều ở trẻ em chưa rõ.", "cond": "Trẻ em"}], "inc": [{"t": "Mức chứng cứ của khuyến cáo 3.1.1", "a": "Tr. 118 và 122, câu khuyến cáo: nhãn (1B)", "b": "Tr. 122, phần rationale: \"certainty of evidence is low (Grade C)\"", "note": "Cùng một khuyến cáo mang hai mức chứng cứ khác nhau. Dòng 1 giữ nhãn 1B của câu khuyến cáo."}, {"t": "Mức chứng cứ của khuyến cáo 3.1.3", "a": "Tr. 127, câu khuyến cáo: nhãn (2C)", "b": "Tr. 129: \"the overall certainty of evidence was graded as high\"", "note": "Câu ghi chứng cứ C, đoạn chứng cứ ghi tổng thể high. Dòng 3 giữ nhãn 2C."}, {"t": "Practice point mang nhãn mức", "a": "Tr. 21 (tóm tắt) và tr. 223: PP 4.9.1.2 kết thúc bằng (1B)", "b": "Các practice point khác trong Ch.3–4 không gắn nhãn", "note": "Chưa rõ PP 4.9.1.2 là khuyến cáo hay practice point; không tạo dòng khuyến cáo mới."}, {"t": "Phạm vi chứng cứ của khuyến cáo 3.7.1", "a": "Tr. 170: khuyến cáo 1B cho trẻ em và người lớn", "b": "Tr. 171–172: chứng cứ moderate ở trẻ em; ở người lớn hạ xuống low do indirectness vì không có thử nghiệm ở người lớn", "note": "Nhãn 1B bao phủ cả hai quần thể, trong khi chứng cứ người lớn thấp hơn."}, {"t": "Yếu tố RRT trong Bảng 34 và PP 4.5.4", "a": "Tr. 213 và tr. 17 (tóm tắt): PP 4.5.4 áp dụng cho trẻ em và người lớn đang CRRT", "b": "Chú thích Bảng 34 (tr. 19 tóm tắt, tr. 215): yếu tố liên quan RRT không áp dụng cho trẻ em", "note": "Không tự chọn một phía."}, {"t": "Tên và ngày của bản dự thảo", "a": "Tr. i và xiv: tên \"KDIGO 2027 Clinical Practice Guideline\"", "b": "Tr. i: \"Public Review Draft, March 2026\"; tr. xii, xiv: tìm tài liệu đến 6/2025", "note": "Bản dự thảo xin ý kiến, nội dung sẽ thay đổi."}, {"t": "Điều kiện trong văn bản nhưng không có trong câu khuyến cáo 3.1.2", "a": "Tr. 122: câu khuyến cáo chỉ loại trừ chấn thương sọ não", "b": "Tr. 122 và 127: văn bản còn nói không áp dụng khi chọn dịch để phòng TLS, sắc tố heme, hoặc CA-AKI (Khuyến cáo 4.9.2.1)", "note": "Điều kiện loại trừ bổ sung chỉ xuất hiện trong văn bản."}, {"t": "Quần thể của khuyến cáo 3.2.3", "a": "Tr. 144: người lớn phẫu thuật có nguy cơ AKI cao", "b": "Tr. 146: chứng cứ từ người lớn bệnh nặng hoặc phẫu thuật lớn", "note": "Quần thể của chứng cứ rộng hơn câu khuyến cáo."}, {"t": "Mức chứng cứ hỗn hợp trong khuyến cáo 4.9.2.1", "a": "Tr. 227: nhãn (1B), ưu tiên NaCl 0,9% hơn natri bicarbonat", "b": "Tr. 230: chứng cứ high so với không bù dịch; low so với 0,45%; very low với đường uống; moderate rằng AKI và có thể RRT tương tự giữa bicarbonat và NaCl 0,9%", "note": "Nhãn đơn lẻ che các mức khác nhau theo từng so sánh."}, {"t": "Quần thể chứng cứ của khuyến cáo 4.9.3.1", "a": "Tr. 234: câu khuyến cáo cho người lớn dùng cản quang iod", "b": "Tr. 234: chứng cứ low ở người lớn thủ thuật tim mạch", "note": "Chứng cứ hẹp hơn quần thể trong câu."}], "val": [{"item": "Dịch tinh thể đệm (Ringer lactat, Plasma-Lyte...) và dịch keo trong danh mục thuốc, quy định dùng albumin", "ref": "1, 2"}, {"item": "Natri bicarbonat tĩnh mạch (nồng độ 4,2% và 8,4%) và quy trình theo dõi natri, thể tích, toan nội bào", "ref": "3"}, {"item": "Vận mạch cho HRS-AKI: terlipressin có đăng ký và có trong danh mục không, norepinephrine, midodrine kèm octreotide", "ref": "13"}, {"item": "Rasburicase có sẵn không, xét nghiệm G6PD, allopurinol và febuxostat trong danh mục", "ref": "14"}, {"item": "Theophylline tiêm cho trẻ sơ sinh ngạt: chế phẩm, quy trình liều tại khoa Sơ sinh", "ref": "15"}, {"item": "Thuốc cản quang iod đẳng hoặc thấp thẩm thấu có trong danh mục; quy trình sàng lọc nguy cơ CA-AKI và truyền dịch trước thủ thuật", "ref": "18; PP 4.9.1.2"}, {"item": "Quy trình stewardship thuốc độc thận, TDM, nhân lực dược lâm sàng, CDSS tại bệnh viện", "ref": "17; PP 4.2.2, 4.3.1, 4.3.2"}, {"item": "Chỉnh liều thuốc thải qua thận khi AKI và RRT: có theo xu hướng SCr, KeGFR, TDM, bảng liều CRRT tại đơn vị", "ref": "PP 4.5.1–4.5.4"}, {"item": "Quy trình ngưng/dùng lại RASi, lợi tiểu, NSAID, metformin (sick-day) và hướng dẫn người bệnh", "ref": "19–22"}, {"item": "Quyền sử dụng: đây là bản dự thảo xin ý kiến, ghi rõ không dùng cho mục đích khác ngoài mục đích ban đầu; cần chờ bản chính thức trước khi đưa vào quy trình hay công cụ của bệnh viện", "ref": "Tr. i"}], "cases": [{"t": "Tình huống 1 (giả định): sốc nhiễm khuẩn, hạ huyết áp, nguy cơ AKI", "rows": [["Giả định", "Người lớn nhập ICU vì nhiễm khuẩn huyết, huyết áp tụt, chưa có chấn thương sọ não, creatinin bắt đầu tăng."], ["Điều tài liệu nói", "Bù thể tích ban đầu bằng dịch tinh thể thay cho dịch keo (khuyến cáo 1, 1B); dịch tinh thể đệm thay NaCl 0,9% (khuyến cáo 2, 1B); MAP >65 mm Hg (khuyến cáo 5, 2C); không dùng dopamine liều thấp để bảo vệ thận (khuyến cáo 6, 1A)."], ["Lưu ý", "Khuyến cáo 1 có mâu thuẫn giữa nhãn 1B và Grade C trong rationale. PP 3.2.3 cho phép mục tiêu MAP khác nếu tăng huyết áp mạn."]]}, {"t": "Tình huống 2 (giả định): toan máu nặng kèm AKI", "rows": [["Giả định", "Người lớn AKI, pH máu động mạch 7,12, không tăng kali máu kháng trị, không quá tải dịch, không có hội chứng urê huyết có triệu chứng."], ["Điều tài liệu nói", "Đề xuất dùng bicarbonat tĩnh mạch thay cho RRT khi pH <7,20 (khuyến cáo 3, 2C), trừ khi có chỉ định RRT khẩn khác."], ["Lưu ý", "Nếu xuất hiện tăng kali kháng trị, quá tải thể tích nặng hoặc urê huyết có triệu chứng thì xét RRT; theo dõi quá tải dịch và tăng natri máu. Điểm không nhất quán 2 về mức chứng cứ."]]}, {"t": "Tình huống 3 (giả định): phẫu thuật tim nguy cơ cao", "rows": [["Giả định", "Người lớn mổ tim chương trình, nguy cơ AKI cao theo yếu tố lâm sàng và dấu ấn sinh học, không CKD tiến triển, không gây mê propofol, đang dùng ACEi."], ["Điều tài liệu nói", "Chiến lược bảo vệ thận đa thành phần (khuyến cáo 7, 1B); axit amin tĩnh mạch dự phòng (khuyến cáo 10, 2A); RIPC ở người lớn (khuyến cáo 12, 2B); không thường quy ngưng RASi trước mổ tim (khuyến cáo 20, 2D)."], ["Lưu ý", "Chứng cứ không ngưng RASi trước mổ tim là very low, từ một thử nghiệm nhỏ."]]}, {"t": "Tình huống 4 (giả định): chụp cản quang ở người nguy cơ cao", "rows": [["Giả định", "Người lớn nguy cơ CA-AKI cao, không quá tải dịch, chụp CT có cản quang iod tĩnh mạch, đang dùng ACEi, lợi tiểu và metformin."], ["Điều tài liệu nói", "Bù NaCl 0,9% quanh thủ thuật (khuyến cáo 18, 1B); hợp lý ngưng lợi tiểu khi không quá tải (PP 4.9.2.2); không thường quy ngưng RASi (khuyến cáo 19, 2C)."], ["Lưu ý", "Metformin: PP 4.9.3.1 (lấy từ KDIGO 2024 CKD) nêu theo eGFR và AKI. Cần đối chiếu thêm bảng dữ liệu eGFR thực tế; điểm không nhất quán 9 và 10."]]}, {"t": "Tình huống 5 (giả định): trẻ sơ sinh ngạt và trẻ sau mổ tim", "rows": [["Giả định", "Sơ sinh ngạt chu sinh nặng; trẻ khác mổ tim có tuần hoàn ngoài cơ thể, tổn thương tim phức tạp thấp, không tăng áp phổi."], ["Điều tài liệu nói", "Một liều theophylline cho sơ sinh ngạt nặng (khuyến cáo 15, 1A); không dùng thường quy nitric oxide hít (khuyến cáo 16, 1C)."], ["Lưu ý", "Câu khuyến cáo theophylline không nêu liều: cần đối chiếu nguyên văn và tờ HDSD tại bệnh viện."]]}], "quiz": [{"q": "Khuyến cáo về dopamine liều thấp để bảo vệ thận có mức nào?", "o": ["Level 2, chứng cứ C, đề xuất dùng", "Level 1, chứng cứ A, khuyến cáo không dùng", "Level 1, chứng cứ B, khuyến cáo dùng", "Không gắn mức"], "a": 1, "e": "Khuyến cáo 3.2.2 là 1A, khuyến cáo không dùng (tr. 142, 143)."}, {"q": "Ngưỡng pH nào trong câu khuyến cáo 3.1.3 để đề xuất bicarbonat tĩnh mạch thay cho RRT?", "o": ["pH <7,30", "pH <7,20", "pH <7,10", "pH <7,00"], "a": 1, "e": "Câu khuyến cáo 3.1.3: acidemia pH <7,20, mức 2C (tr. 127)."}, {"q": "Điểm không nhất quán nào liên quan khuyến cáo 3.1.1?", "o": ["Nhãn 1B ở câu và Grade C ở rationale", "Nhãn 2A và 2D", "Thiếu tên thuốc", "Số trang khác nhau"], "a": 0, "e": "Câu ghi (1B) nhưng rationale ghi low (Grade C) (tr. 118, 122)."}, {"q": "Khuyến cáo 4.9.2.1 ưu tiên dịch nào trước thuốc cản quang iod ở người lớn nguy cơ cao không quá tải?", "o": ["NaCl 0,45%", "Natri bicarbonat", "NaCl 0,9%", "Không truyền dịch"], "a": 2, "e": "Khuyến cáo 4.9.2.1 (1B): NaCl 0,9% thay vì nhược trương, bicarbonat hoặc không truyền dịch (tr. 227)."}, {"q": "Khuyến cáo không thường quy ngưng RASi trước phẫu thuật tim chương trình mang nhãn nào?", "o": ["2B", "2D", "1B", "1C"], "a": 1, "e": "Phẫu thuật tim 2D, phẫu thuật không tim 2B (tr. 236)."}, {"q": "MAP đích trong khuyến cáo 3.2.1 cho người lớn bệnh nặng là bao nhiêu?", "o": [">55 mm Hg", ">65 mm Hg", ">75 mm Hg", ">85 mm Hg"], "a": 1, "e": "Khuyến cáo 3.2.1 (2C): MAP >65 mm Hg (tr. 136)."}, {"q": "Practice point nào trong Ch.4 lại mang nhãn mức (1B)?", "o": ["PP 4.2.1", "PP 4.9.1.2", "PP 4.9.2.2", "PP 4.11.1"], "a": 1, "e": "PP 4.9.1.2 kết thúc bằng (1B) (tr. 223); đây là điểm không nhất quán 3."}], "gloss": [{"term": "AKI", "mean": "Tổn thương thận cấp (acute kidney injury)", "page": "118"}, {"term": "AKD", "mean": "Bệnh thận cấp (acute kidney disease)", "page": "118"}, {"term": "CA-AKI", "mean": "AKI liên quan thuốc cản quang (contrast-associated AKI)", "page": "222"}, {"term": "RASi", "mean": "Thuốc ức chế hệ renin-angiotensin", "page": "234"}, {"term": "HRS-AKI", "mean": "AKI do hội chứng gan thận", "page": "162"}, {"term": "TLS", "mean": "Hội chứng ly giải u (tumor lysis syndrome)", "page": "169"}, {"term": "MAKE90", "mean": "Biến cố thận bất lợi chính ở 90 ngày", "page": "146"}, {"term": "KeGFR", "mean": "GFR động học ước tính (kinetic eGFR)", "page": "212"}], "selfcheck": ["Đã đọc bằng văn bản toàn bộ phần tóm tắt Ch.3–4 (tr. 10–23, PDF 24–37), mọi câu khuyến cáo và practice point trong thân chương, và các đoạn \"Certainty of evidence\" của 20 câu khuyến cáo.", "Đã xem ảnh trang Hình 9 (tr. 145) và Hình 12 (tr. 223). Hình 11 và Bảng 34 chỉ đọc bằng văn bản; Key information, rationale và nội dung thử nghiệm chỉ đọc có chọn lọc.", "Kiểm tra tự động 97 cụm từ, số liệu và nhãn trên đúng trang: 97 khớp (4 truy vấn lỗi lần đầu do viết truy vấn hoặc nội dung nằm trong ảnh, đã sửa). Đếm nhãn: Level 1 12, Level 2 10; chứng cứ A 3, B 9, C 7, D 3, khớp ô \"Hệ thống phân mức\".", "Phát hiện 10 điểm không nhất quán, gồm 2 câu khuyến cáo có nhãn khác mô tả chứng cứ (3.1.1, 3.1.3). Chưa đọc lại nguyên văn từng ô lần hai; chưa thay thế việc đọc lại nguyên văn.", "Tình huống và trắc nghiệm do AI soạn từ các dòng khuyến cáo, giả định, không dùng dữ liệu bệnh nhân thật."], "checks": {"pdf": "src.pdf", "page_offset": 14, "items": [{"p": 118, "s": "we recommend using crystalloids rather than colloids"}, {"p": 122, "s": "certainty of evidence is low (grade c)"}, {"p": 122, "s": "buffered crystalloids instead of 0.9% saline"}, {"p": 122, "s": "does not apply to people with traumatic brain injury"}, {"p": 124, "s": "buffered crystalloids reduce the risk of death"}, {"p": 127, "s": "severe metabolic acidosis with acidemia"}, {"p": 127, "s": "unless there is another urgent indication for rrt"}, {"p": 127, "s": "refractory hyperkalemia, severe volume overload, or symptomatic uremia"}, {"p": 129, "s": "overall certainty of evidence was graded as high"}, {"p": 130, "s": "oral rehydration"}, {"p": 130, "s": "positive fluid balance gain of 1-2 kg at 24 hours"}, {"p": 132, "s": "liberal fluid strategy decreases the risk of aki"}, {"p": 134, "s": "hemodynamic monitoring strategies"}, {"p": 136, "s": "mean arterial pressure (map) of >65 mm hg"}, {"p": 140, "s": "overall certainty of evidence was graded as low"}, {"p": 142, "s": "we recommend against using low-dose dopamine"}, {"p": 143, "s": "tachyarrhythmias and myocardial ischemia"}, {"p": 143, "s": "protocols or order sets"}, {"p": 144, "s": "multicomponent kidney-protection strategy"}, {"p": 146, "s": "reduce the risk of stage 2 or 3 aki and make90"}, {"p": 149, "s": "we suggest use of diuretics"}, {"p": 150, "s": "overall, there is moderate certainty of evidence"}, {"p": 152, "s": "intermittent boluses"}, {"p": 153, "s": "in preference to"}, {"p": 154, "s": "no difference in mortality between diuretic use and application of rrt"}, {"p": 155, "s": "140-180 mg/dl"}, {"p": 156, "s": "prophylactic intravenous amino acid"}, {"p": 158, "s": "intravenous amino acids reduce the risk of any stage of aki"}, {"p": 159, "s": "remote ischemic preconditioning"}, {"p": 161, "s": "remote ischemic preconditioning reduces the risk of aki and rrt"}, {"p": 161, "s": "for children undergoing cardiac surgery"}, {"p": 162, "s": "vasoconstrictor therapy for adults"}, {"p": 162, "s": "midodrine with octreotide"}, {"p": 165, "s": "large increased risk of serious adverse events"}, {"p": 169, "s": "without urinary alkalinization"}, {"p": 170, "s": "rasburicase over allopurinol or febuxostat"}, {"p": 170, "s": "xanthine oxidase inhibitors"}, {"p": 172, "s": "downgraded to low due to indirectness"}, {"p": 174, "s": "heme pigment nephropathy"}, {"p": 175, "s": "enteral route"}, {"p": 176, "s": "excessive protein intake should be avoided"}, {"p": 177, "s": "water-soluble vitamins"}, {"p": 177, "s": "early delivery"}, {"p": 178, "s": "tropical and subtropical regions"}, {"p": 181, "s": "traditional medicines and toxic chemicals"}, {"p": 185, "s": "prolonged exposure to high temperatures"}, {"p": 185, "s": "age-appropriate blood pressure targets"}, {"p": 186, "s": "2.5 grams/kg"}, {"p": 187, "s": "routinely in children receiving crrt"}, {"p": 187, "s": "terlipressin or norepinephrine for children"}, {"p": 188, "s": "single dose of theophylline"}, {"p": 189, "s": "theophylline greatly reduces the risk of aki"}, {"p": 190, "s": "against routine use of inhaled nitric oxide"}, {"p": 192, "s": "inhaled nitric oxide during anesthesia does not affect"}, {"p": 194, "s": "4 categories"}, {"p": 198, "s": "drug and nephrotoxin stewardship using a multimodal approach"}, {"p": 198, "s": "a level 1 recommendation was warranted"}, {"p": 202, "s": "discontinuation of offending nephrotoxic agents"}, {"p": 202, "s": "therapeutic drug monitoring"}, {"p": 203, "s": "drug-drug interactions"}, {"p": 205, "s": "crystalline nephropathies"}, {"p": 208, "s": "pharmacists should perform medication reconciliation"}, {"p": 211, "s": "clinical decision support systems"}, {"p": 211, "s": "biomarkers of tubular damage are approved"}, {"p": 212, "s": "should not be based on creatinine clearance"}, {"p": 212, "s": "kegfr"}, {"p": 213, "s": "consider and adapt drug dosing"}, {"p": 213, "s": "table 34"}, {"p": 214, "s": "molecular weight"}, {"p": 215, "s": "do not apply to children"}, {"p": 216, "s": "pesticides"}, {"p": 216, "s": "natural products"}, {"p": 217, "s": "differential diagnosis of post-contrast aki"}, {"p": 217, "s": "validated tools"}, {"p": 221, "s": "preexisting impairment of kidney function"}, {"p": 222, "s": "alternative imaging methods"}, {"p": 223, "s": "iso-osmolar or low-osmolar iodinated contrast media may be used"}, {"p": 223, "s": "(1b)"}, {"p": 224, "s": "lowest possible dose"}, {"p": 225, "s": "volume status assessment"}, {"p": 227, "s": "we recommend prophylactic periprocedural volume expansion with 0.9% saline"}, {"p": 230, "s": "high certainty of evidence that prophylactic volume expansion"}, {"p": 230, "s": "very low certainty of evidence regarding prophylactic volume expansion"}, {"p": 232, "s": "hold diuretics"}, {"p": 233, "s": "withdrawal of nonessential potentially nephrotoxic medications"}, {"p": 233, "s": "metformin need not be stopped"}, {"p": 234, "s": "not routinely withholding renin-angiotensin"}, {"p": 234, "s": "there are not differences in incident aki"}, {"p": 236, "s": "major cardiac (2d)"}, {"p": 236, "s": "non-cardiac surgery (2b)"}, {"p": 238, "s": "does not alter the risk of aki"}, {"p": 239, "s": "temporarily stopping specific classes of drugs"}, {"p": 239, "s": "clear plan of when to restart"}, {"p": 240, "s": "sulfonylureas and metformin"}, {"p": 241, "s": "may increase the risk of unplanned hospital admissions"}, {"p": 244, "s": "newborns"}, {"p": 244, "s": "validity of kegfr equations"}]}}</script>
+<script>
+"use strict";
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+var $=function(i){return document.getElementById(i);};
+var D=JSON.parse($("data").textContent);
+var M=D.meta,GRP=D.groups,SC=D.strengths,CE=D.certainty,RECS=D.recs,KC=D.kc||[],INC=D.inc||[],VAL=D.val||[],CASES=D.cases||[],QUIZ=D.quiz||[],GL=D.gloss||[];
+function find(a,k){for(var i=0;i<a.length;i++)if(a[i].k===k)return a[i];return {k:k,label:k,tone:"ti"};}
+
+/* ===== ICON 3D ===== */
+function ico(g,glyph){return '<svg class="ico3" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="55" rx="22" ry="6" fill="url(#r-sh)"/><ellipse cx="32" cy="50" rx="20" ry="6" fill="url(#g-ped)" stroke="#c3cadb"/><circle cx="32" cy="28" r="18" fill="url(#'+g+')"/><circle cx="32" cy="28" r="18" fill="url(#r-hi)"/>'+glyph+'</svg>';}
+var G={
+ liver:'<path d="M20 26c6-6 18-6 24 0 3 4-1 12-9 13-8 1-16-5-15-13z" fill="#fff" opacity=".92"/>',
+ grid:'<g fill="#fff" opacity=".92"><rect x="22" y="18" width="9" height="9" rx="2"/><rect x="33" y="18" width="9" height="9" rx="2"/><rect x="22" y="29" width="9" height="9" rx="2"/><rect x="33" y="29" width="9" height="9" rx="2"/></g>',
+ calc:'<g fill="#fff" opacity=".92"><rect x="23" y="16" width="18" height="24" rx="3"/></g><g fill="#3730a3"><rect x="26" y="19" width="12" height="5" rx="1"/><circle cx="27" cy="29" r="1.7"/><circle cx="32" cy="29" r="1.7"/><circle cx="37" cy="29" r="1.7"/><circle cx="27" cy="35" r="1.7"/><circle cx="32" cy="35" r="1.7"/><circle cx="37" cy="35" r="1.7"/></g>',
+ warn:'<path d="M32 15l13 22H19z" fill="#fff" opacity=".92"/><rect x="31" y="22" width="2" height="8" fill="#b45309"/><circle cx="32" cy="33" r="1.4" fill="#b45309"/>',
+ check:'<path d="M22 29l7 7 13-14" stroke="#fff" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>',
+ case:'<g fill="#fff" opacity=".92"><circle cx="32" cy="22" r="6"/><path d="M21 40c0-8 6-12 11-12s11 4 11 12z"/></g>',
+ quiz:'<text x="32" y="38" text-anchor="middle" font-size="22" font-weight="800" fill="#fff" font-family="sans-serif">?</text>',
+ book:'<g fill="#fff" opacity=".92"><path d="M20 18h11v22H20z"/><path d="M33 18h11v22H33z"/></g>'
+};
+var TABS=[["p-rec","Khuyến cáo","g-ind",G.liver,true],["p-mx","Ma trận & key concept","g-teal",G.grid,true],["p-calc","Công cụ tính","g-amb",G.calc,!!(D.tools&&D.tools.html)],["p-inc","Không nhất quán","g-red",G.warn,true],["p-val","Cần thẩm định","g-blu",G.check,true],["p-case","Tình huống","g-teal",G.case,CASES.length>0],["p-quiz","Trắc nghiệm","g-amb",G.quiz,QUIZ.length>0],["p-ref","Chú giải & nguồn","g-ind",G.book,true]].filter(function(t){return t[4];});
+
+/* ===== RENDER ===== */
+var state={g:-1,s:"",e:"",q:"",hl:0,tab:"p-rec"};
+function stBadge(r){var s=find(SC,r.s);return '<span class="st '+s.tone+'">'+esc(s.label)+'</span>'+(r.neg?'<span class="neg">không nên</span>':'');}
+function renderRecs(){
+  var q=state.q.trim().toLowerCase();
+  var rows=RECS.filter(function(r){
+    if(state.g>=0&&r.g!==state.g)return false;
+    if(state.s&&r.s!==state.s)return false;
+    if(state.e&&r.c!==state.e)return false;
+    if(q&&(r.kw+" "+r.pop+" "+r.it+" "+GRP[r.g]).toLowerCase().indexOf(q)<0)return false;
+    return true;});
+  var h='<thead><tr><th>#</th><th>Nhóm</th><th>Mức KC</th><th>Mức CC</th><th>Quần thể / điều kiện</th><th>Diễn giải</th></tr></thead><tbody>';
+  if(!rows.length)h+='<tr><td colspan="6" class="empty">Không có dòng nào khớp bộ lọc.</td></tr>';
+  rows.forEach(function(r){var e=find(CE,r.c);
+    h+='<tr id="rec-'+esc(r.n)+'"'+(state.hl===r.n?' class="hl"':'')+'><td class="num">'+esc(r.n)+'</td><td class="vt"><span class="grp">'+esc(GRP[r.g])+'</span></td><td class="nw">'+stBadge(r)+'</td><td class="nw"><span class="ev '+e.tone+'">'+esc(e.label)+'</span></td><td>'+esc(r.pop)+'</td><td>'+esc(r.it)+'</td></tr>';});
+  $("recs").innerHTML=h+'</tbody>';
+  $("count").textContent="Đang hiển thị "+rows.length+" / "+RECS.length+" khuyến cáo";
+}
+function chipRow(id,items,key,all){
+  var el=$(id);
+  function draw(){el.innerHTML="";[[all,key==="g"?-1:""]].concat(items).forEach(function(it){
+    var b=document.createElement("button");b.type="button";b.className="chip";b.textContent=it[0];
+    b.setAttribute("aria-pressed",String(state[key]===it[1]));
+    b.addEventListener("click",function(){state[key]=it[1];state.hl=0;draw();renderRecs();});
+    el.appendChild(b);});}
+  draw();
+}
+function setupFilters(){
+  chipRow("gchips",GRP.map(function(n,i){return [n,i];}),"g","Tất cả nhóm");
+  chipRow("schips",SC.map(function(s){return [s.label,s.k];}),"s","Mọi mức KC");
+  chipRow("echips",CE.map(function(s){return [s.label,s.k];}),"e","Mọi mức CC");
+}
+function renderMx(){
+  var h='<div></div>'+SC.map(function(s){return '<div class="h">'+esc(s.label)+'</div>';}).join("");
+  CE.forEach(function(c){
+    h+='<div class="r">'+esc(c.label)+'</div>';
+    SC.forEach(function(s){
+      var m=RECS.filter(function(r){return r.c===c.k&&r.s===s.k;});
+      h+='<div class="c '+s.tone+'">'+(m.length?m.map(function(r){return '<button type="button" class="rb" data-n="'+esc(r.n)+'" aria-label="Khuyến cáo '+esc(r.n)+(r.neg?', không nên':'')+'">'+esc(r.n)+(r.neg?'✕':'')+'</button>';}).join(""):'<span class="note">—</span>')+'</div>';});});
+  var el=$("mx");el.style.gridTemplateColumns="110px repeat("+SC.length+",1fr)";el.innerHTML=h;
+  Array.prototype.forEach.call(el.querySelectorAll(".rb"),function(b){b.addEventListener("click",function(){goRec(b.getAttribute("data-n"));});});
+  var neg=RECS.filter(function(r){return r.neg;}).map(function(r){return r.n;});
+  $("mx-note").textContent=neg.length?'Dấu "không nên" (✕) đánh dấu khuyến cáo chống lại một can thiệp ('+neg.join(", ")+').':"";
+  if(!KC.length){$("kc-wrap").hidden=true;return;}
+  $("kc-h").textContent=M.kc_title||"Key concept (không áp dụng GRADE)";
+  var k='<thead><tr><th>#</th><th>Vị trí</th><th>Nội dung (diễn giải)</th><th>Điều kiện</th></tr></thead><tbody>';
+  KC.forEach(function(r){k+='<tr><td class="num">'+esc(r.id)+'</td><td>'+esc(r.loc)+'</td><td>'+esc(r.txt)+'</td><td>'+esc(r.cond)+'</td></tr>';});
+  $("kc").innerHTML=k+'</tbody>';
+}
+function goRec(n){state.g=-1;state.s="";state.e="";state.q="";$("q").value="";state.hl=/^\d+$/.test(n)?+n:n;setupFilters();showTab("p-rec");renderRecs();var el=$("rec-"+n);if(el&&el.scrollIntoView)el.scrollIntoView({block:"center"});}
+function renderInc(){
+  $("inc-h").textContent=INC.length+" điểm không nhất quán trong tài liệu";
+  $("inc-sub").textContent=INC.length?(M.inc_sub||"Mỗi điểm ghi hai vị trí và nội dung từng bên. Không tự chọn một phía."):"Không phát hiện trong phạm vi đã đọc.";
+  var fix=INC.some(function(r){return r.fix;});
+  var h='<thead><tr><th>#</th><th>Nội dung</th><th>Vị trí A</th><th>Vị trí B</th><th>Ghi chú</th>'+(fix?'<th>Đề xuất xử lý (AI, chờ duyệt)</th>':'')+'</tr></thead><tbody>';
+  INC.forEach(function(r,i){h+='<tr><td class="num">'+(i+1)+'</td><td><b>'+esc(r.t)+'</b></td><td>'+esc(r.a)+'</td><td>'+esc(r.b)+'</td><td>'+esc(r.note)+'</td>'+(fix?'<td>'+esc(r.fix||"")+'</td>':'')+'</tr>';});
+  $("inc").innerHTML=h+'</tbody>';
+}
+function renderVal(){
+  var h='<thead><tr><th>#</th><th>Điểm cần thẩm định</th><th>Liên quan</th><th>Trạng thái</th></tr></thead><tbody>';
+  VAL.forEach(function(r,i){h+='<tr><td class="num">'+(i+1)+'</td><td>'+esc(r.item)+'</td><td>'+esc(r.ref)+'</td><td><span class="chipcn">[CẦN THẨM ĐỊNH]</span></td></tr>';});
+  $("val").innerHTML=h+'</tbody>';
+}
+function renderCases(){
+  $("cases").innerHTML=CASES.map(function(c){return '<div class="case"><h3>'+esc(c.t)+'</h3>'+c.rows.map(function(r,i){return '<div class="row '+(i===0?'y':'')+'"><b>'+esc(r[0])+'</b><span>'+esc(r[1])+'</span></div>';}).join("")+'</div>';}).join("");
+}
+function renderGloss(){
+  var h='<thead><tr><th>Từ</th><th>Nghĩa</th><th>Trang</th></tr></thead><tbody>';
+  GL.forEach(function(r){h+='<tr><td>'+esc(r.term)+'</td><td>'+esc(r.mean)+'</td><td>tr. '+esc(r.page)+'</td></tr>';});
+  $("gloss").innerHTML=h+'</tbody>';
+  $("selfcheck").innerHTML=(D.selfcheck||[]).map(function(s){return '<li>'+esc(s)+'</li>';}).join("");
+  $("sources").innerHTML=(M.sources||[]).map(function(s){return '<li>'+esc(s)+'</li>';}).join("");
+}
+function renderHead(){
+  document.title=M.title;
+  $("brand").innerHTML=esc(M.brand||"")+'<span>'+esc(M.brand_sub||"")+'</span>';
+  $("eyebrow").textContent=M.eyebrow||"Dành cho bác sĩ & dược sĩ lâm sàng";
+  $("h1").textContent=M.title;
+  $("docdl").innerHTML=(M.docinfo||[]).map(function(r){return '<dt>'+esc(r[0])+'</dt><dd>'+esc(r[1])+'</dd>';}).join("");
+  $("rec-h").textContent=RECS.length+" khuyến cáo";
+  $("rec-sub").textContent=M.rec_sub||"Vị trí ghi theo trang in. Mỗi dòng giữ nguyên mức khuyến cáo và mức chứng cứ của tài liệu.";
+  $("q").placeholder=M.search_hint||"Tìm trong bảng khuyến cáo…";
+  $("foot").innerHTML=esc(M.ai_label)+'<br>'+esc(M.footer||"");
+  if(D.tools&&D.tools.html){
+    $("calc-h").textContent=D.tools.title;$("calc-sub").textContent=D.tools.sub||"";
+    $("calc-body").innerHTML=D.tools.html;$("calc-disc").textContent=D.tools.disc||"";
+  }
+}
+
+/* ===== TRẮC NGHIỆM ===== */
+var qi=0,score=0,answered=false;
+function renderQuiz(){
+  var el=$("quiz");if(!QUIZ.length)return;
+  if(qi>=QUIZ.length){$("qprog").textContent="Hoàn thành";el.innerHTML='<div class="expl">Điểm: '+score+' / '+QUIZ.length+'</div><button type="button" class="btn" id="qre">Làm lại</button>';$("qre").addEventListener("click",function(){qi=0;score=0;answered=false;renderQuiz();});return;}
+  var q=QUIZ[qi];answered=false;
+  $("qprog").textContent="Câu "+(qi+1)+" / "+QUIZ.length;
+  el.innerHTML='<div class="qh">'+esc(q.q)+'</div>'+q.o.map(function(t,i){return '<button type="button" class="opt" data-i="'+i+'">'+esc(t)+'</button>';}).join("")+'<div id="qx"></div>';
+  Array.prototype.forEach.call(el.querySelectorAll(".opt"),function(b){b.addEventListener("click",function(){
+    if(answered)return;answered=true;var i=+b.getAttribute("data-i");
+    if(i===q.a)score++;
+    Array.prototype.forEach.call(el.querySelectorAll(".opt"),function(x,j){x.disabled=true;if(j===q.a)x.classList.add("ok");else if(j===i)x.classList.add("no");});
+    $("qx").innerHTML='<div class="expl">'+esc(q.e)+'</div><button type="button" class="btn" id="qn">'+(qi+1<QUIZ.length?"Câu tiếp":"Xem điểm")+'</button>';
+    $("qn").addEventListener("click",function(){qi++;renderQuiz();});});});
+}
+
+/* ===== TAB, THEME, IN ===== */
+function showTab(id){
+  state.tab=id;
+  ["p-rec","p-mx","p-calc","p-inc","p-val","p-case","p-quiz","p-ref"].forEach(function(p){var e=$(p);if(e)e.hidden=(p!==id);});
+  Array.prototype.forEach.call($("tabs").children,function(b){b.setAttribute("aria-selected",String(b.getAttribute("data-t")===id));});
+}
+function setupTabs(){
+  var nav=$("tabs");nav.innerHTML="";
+  TABS.forEach(function(t){
+    var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.setAttribute("data-t",t[0]);b.setAttribute("aria-selected",String(t[0]===state.tab));
+    b.innerHTML='<span class="ico">'+ico(t[2],t[3])+'</span>'+esc(t[1]);
+    b.addEventListener("click",function(){showTab(t[0]);});nav.appendChild(b);});
+  ["p-calc","p-case","p-quiz"].forEach(function(p){if(!TABS.some(function(t){return t[0]===p;}))$(p).remove();});
+}
+function setTheme(t){
+  document.documentElement.setAttribute("data-theme",t);
+  Array.prototype.forEach.call(document.querySelectorAll(".seg button"),function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-th")===t));});
+  try{localStorage.setItem("gl-theme",t);}catch(e){}
+}
+function init(){
+  renderHead();$("hico").innerHTML=ico("g-ind",G.liver);
+  setupTabs();setupFilters();renderRecs();renderMx();renderInc();renderVal();renderCases();renderGloss();renderQuiz();
+  if(D.tools&&D.tools.js){try{(new Function("esc","$",D.tools.js))(esc,$);}catch(e){}}
+  Array.prototype.forEach.call(document.querySelectorAll(".seg button"),function(b){b.addEventListener("click",function(){setTheme(b.getAttribute("data-th"));});});
+  $("q").addEventListener("input",function(){state.q=this.value;state.hl=0;renderRecs();});
+  var t="light";try{var s=localStorage.getItem("gl-theme");if(s==="light"||s==="warm"||s==="dark")t=s;}catch(e){}
+  setTheme(t);
+  $("print-btn").addEventListener("click",function(){window.print();});
+}
+init();
+</script>
+</body>
+</html>
