@@ -1,6 +1,6 @@
 /* Service worker ClinPharmAI Hub.
    Tăng CACHE_VERSION mỗi khi đổi app shell hoặc tài liệu. */
-var CACHE_VERSION='cpa-hub-v1.1.6';
+var CACHE_VERSION='cpa-hub-v1.1.7';
 var CDN_CACHE='cpa-cdn-v1';
 var SHELL=['./','index.html','css/app.css','js/app.js','data/pages.json','manifest.webmanifest','icons/icon.svg','icons/icon-192.png','icons/icon-512.png'];
 var CDN_HOSTS=['cdn.tailwindcss.com','cdn.jsdelivr.net','cdnjs.cloudflare.com','fonts.googleapis.com','fonts.gstatic.com'];
@@ -13,8 +13,17 @@ function fresh(req){
   if(req.mode==='navigate')return new Request(req.url,{cache:'no-cache',credentials:'same-origin'});
   return new Request(req,{cache:'no-cache'});
 }
+// Netlify chuyển hướng x.html -> /x (pretty URLs). Trình duyệt từ chối phản hồi đã chuyển hướng
+// khi service worker trả cho yêu cầu điều hướng, nên dựng lại thành phản hồi thường trước khi lưu/trả.
+function clean(res){
+  if(!res.redirected)return Promise.resolve(res);
+  return res.blob().then(function(b){
+    return new Response(b,{status:res.status,statusText:res.statusText,headers:res.headers});
+  });
+}
+function fetchFresh(req){return fetch(fresh(req)).then(clean);}
 function addFresh(c,url){
-  return fetch(fresh(url)).then(function(res){
+  return fetchFresh(url).then(function(res){
     if(!res.ok)throw new Error(url+' '+res.status);
     return c.put(url,res);
   });
@@ -40,14 +49,14 @@ self.addEventListener('activate',function(e){
 function staleWhileRevalidate(req){
   return caches.open(CACHE_VERSION).then(function(c){
     return c.match(req).then(function(hit){
-      var net=fetch(fresh(req)).then(function(res){if(res.ok)c.put(req,res.clone());return res;});
+      var net=fetchFresh(req).then(function(res){if(res.ok)c.put(req,res.clone());return res;});
       return hit?(net.catch(function(){}),hit):net;
     });
   });
 }
 function networkFirst(req){
   return caches.open(CACHE_VERSION).then(function(c){
-    return fetch(fresh(req)).then(function(res){
+    return fetchFresh(req).then(function(res){
       if(res.ok)c.put(req,res.clone());
       return res;
     }).catch(function(){
