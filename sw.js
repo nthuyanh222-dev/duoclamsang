@@ -1,6 +1,6 @@
 /* Service worker ClinPharmAI Hub.
    Tăng CACHE_VERSION mỗi khi đổi app shell hoặc tài liệu. */
-var CACHE_VERSION='cpa-hub-v1.0.0';
+var CACHE_VERSION='cpa-hub-v1.1.1';
 var CDN_CACHE='cpa-cdn-v1';
 var SHELL=['./','index.html','css/app.css','js/app.js','data/pages.json','manifest.webmanifest','icons/icon.svg','icons/icon-192.png','icons/icon-512.png'];
 var CDN_HOSTS=['cdn.tailwindcss.com','cdn.jsdelivr.net','cdnjs.cloudflare.com','fonts.googleapis.com','fonts.gstatic.com'];
@@ -32,6 +32,16 @@ function staleWhileRevalidate(req){
     });
   });
 }
+function networkFirst(req){
+  return caches.open(CACHE_VERSION).then(function(c){
+    return fetch(req).then(function(res){
+      if(res.ok)c.put(req,res.clone());
+      return res;
+    }).catch(function(){
+      return c.match(req).then(function(hit){return hit||Response.error();});
+    });
+  });
+}
 function cacheFirst(req,name){
   return caches.open(name).then(function(c){
     return c.match(req,{ignoreSearch:false}).then(function(hit){
@@ -48,7 +58,9 @@ self.addEventListener('fetch',function(e){
   if(req.method!=='GET')return;
   var url=new URL(req.url);
   if(url.origin===self.location.origin){
-    // trả bản đã cache ngay, cập nhật nền: bản mới có hiệu lực ở lần mở sau
+    // danh mục: lấy mạng trước để tài liệu mới hiện ngay, mất mạng thì dùng cache
+    if(url.pathname.indexOf('/data/')>=0){e.respondWith(networkFirst(req));return;}
+    // còn lại: trả bản đã cache ngay, cập nhật nền: bản mới có hiệu lực ở lần mở sau
     e.respondWith(staleWhileRevalidate(req));
     return;
   }
